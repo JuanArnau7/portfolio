@@ -46,7 +46,6 @@ const NavContainer = styled.nav `
     height: 100%;
     width: 100%;
     align-items: center;
-    ${'' /* background-color: #8a8a8a; */}
     background-color: #656565;
 
 a{
@@ -61,7 +60,7 @@ a{
     margin:1rem;
     height:100%;
 }
-a:enabled{
+a:active{
     background-color:red;
 }
     `
