@@ -1,4 +1,5 @@
 import React from "react";
+import Footer from "./Footer";
 
 
 import NavBar from './NavBar'
@@ -11,6 +12,7 @@ const About = () => {
         <>
         <NavBar></NavBar>
             <h1>Soy About</h1>
+        <Footer></Footer>
         </>
     )
 }
