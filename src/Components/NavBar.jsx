@@ -26,21 +26,17 @@ const NavBar = () => {
             
             </p>
         </div>
-        <div className="aContainer">
-            <a href="">cv</a>
-        </div>
-        <div className="aContainer">
-            <a href="/Proyectos">Proyectos</a>
-        </div>
-        <div className="aContainer">
-            <a href="/">Foto</a>
-        </div>
-        <div className="aContainer">
-            <a href="/About">SobreMi</a>
-        </div>
-        <div className="aContainer">
-            <a href="/Contacto">Contacto</a>
-        </div>
+
+            <a className="direccionadores" href="">cv</a>
+
+            <a className="direccionadores" href="/Proyectos">Proyectos</a>
+
+            <a className="direccionadores" href="/">Foto</a>
+
+            <a className="direccionadores" href="/About">SobreMi</a>
+
+            <a className="direccionadores" href="/Contacto">Contacto</a>
+
         <div>
             <p className="botonesen"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-language" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ff2301" fill="none" stroke-linecap="round" stroke-linejoin="round">
             <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
@@ -62,26 +58,35 @@ export default NavBar
 const NavContainer = styled.nav `
     display: flex;
     justify-content: space-around;    
-    flex-direction: row;
-    height: 100%;
-    width: 100%;
     align-items: center;
     background-color: #656565;
 
-a{
-    text-decoration: none;
-    color: #ff2301;
+.direccionadores{
     font-size:1.5rem;
+    color: #ff2301;
+    position: relative;
+    text-decoration: none;
+}
 
-}
-.aContainer{
-    background-color: #656565;
+.direccionadores::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 4px;
+    border-radius: 4px;
+    background-color: #ff2301;   
+    bottom: 0;
+    left: 0;
+    transform-origin: right;
+    transform: scaleX(0);
+    transition: transform .3s ease-in-out ;
+    }
 
-    margin:1rem;
-    height:100%;
+.direccionadores:hover::before {
+    transform-origin: left;   
+    transform: scaleX(1);
+    
 }
-a:active{
-    background-color:red;
-}
+
 
     `

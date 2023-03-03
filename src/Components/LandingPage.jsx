@@ -75,6 +75,8 @@ background-color: white;
 a{
     padding: 1rem;
     margin: 1rem;
+    transition: transform 250ms, opacity 400ms;
+
 }
 .contNoA{
     display: flex;
@@ -83,4 +85,11 @@ a{
     align-items: center;
 }
 
+
+a:hover{
+    transform: scale(1.2);
+    opacity: 1;
+    /* background-color: whitesmoke; */
+    /* border-radius:50%; */
+}
 `
