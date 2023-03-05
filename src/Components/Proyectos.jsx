@@ -13,7 +13,8 @@ const Proyectos = () => {
 
     return (
         <>
-        <NavBar></NavBar>
+        <NavBar> </NavBar>
+        <div className="fondo"> 
             <h1>Proyectos</h1>
         <ProyectosContainer>
 
@@ -59,6 +60,7 @@ const Proyectos = () => {
                 
             </div>
         </ProyectosContainer>
+        </div>
         <Footer></Footer>
         </>
     )
@@ -70,6 +72,14 @@ const ProyectosContainer = styled.nav `
     display: flex;
     align-items: center;
     justify-content: center;
+
+    .fondo{
+        /* background: #ccc; */
+        /* background-color: black; */
+        /* height: 100%; */
+        /* width: 100%; */
+    }
+    
     .contImgs{
         margin: 15px;
         padding: 10px;
@@ -77,6 +87,7 @@ const ProyectosContainer = styled.nav `
         display: flex;
         flex-direction: column;
         border-radius: 0.5rem;
+        background-color: #ccc;
     }
     
     .imgs{

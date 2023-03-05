@@ -4,6 +4,20 @@ import Footer from "./Footer";
 
 import NavBar from './NavBar'
 import styled from "styled-components";
+
+import iconoCss from '../skills/Css.png'
+import iconohtml from '../skills/Html.png'
+import iconoBoostrap from '../skills/Boostrap.png'
+import iconoJavaScript from '../skills/JavaScript.png'
+import iconoMongoDB from '../skills/MongoDB.png'
+import iconoNode from '../skills/Node.png'
+import iconoPostgresql from '../skills/Postgresql.png'
+import iconoReact from '../skills/React.png'
+import iconoTailwind from '../skills/Tailwind.png'
+import iconoTypeScript from '../skills/TypeScript.png'
+// import iconoReact from '../images/React.jpg'
+
+
 const About = () => {
 
 
@@ -48,7 +62,18 @@ const About = () => {
             <line x1="13" y1="15" x2="16" y2="15" />
             <rect x="4" y="4" width="16" height="16" rx="4" />
             </svg>
-
+            <div className="icons-container">
+                <img alt="Skill icon not found" src={iconoCss}></img>
+                <img alt="Skill icon not found" src={iconoBoostrap}></img>
+                <img alt="Skill icon not found" src={iconohtml}></img>
+                <img alt="Skill icon not found" src={iconoJavaScript}></img>
+                <img alt="Skill icon not found" src={iconoMongoDB}></img>
+                <img alt="Skill icon not found" src={iconoNode}></img>
+                <img alt="Skill icon not found" src={iconoPostgresql}></img>
+                <img alt="Skill icon not found" src={iconoReact}></img>
+                <img alt="Skill icon not found" src={iconoTailwind}></img>
+                <img alt="Skill icon not found" src={iconoTypeScript}></img>
+            </div>
             </div>
             
         </AboutContainer>
@@ -77,5 +102,20 @@ const AboutContainer = styled.nav`
         width: 30% ;
         height: 700px;
     }
+    img{
+        width: 150px;
+        height: 150px;
+        border-radius: 15%;
+        opacity: 1;
+    }
+    .icons-container{
+        /* background-color: ; */
+        /* max-width: fit-content; */
+        /* max-height: min-content ; */
+        /* display: flex; */
+        /* justify-content: space-evenly; */
+        /* max-width: min-content; */
 
+
+    }
 `

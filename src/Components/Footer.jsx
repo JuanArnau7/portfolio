@@ -21,6 +21,10 @@ const Footer = () => {
 export default Footer
 
 const FooterContainer = styled.nav`
+position: absolute;
+bottom: 0;
+width: 100%;
+align-items: center;
 a{
     text-decoration: none;
     color: #ff2301;

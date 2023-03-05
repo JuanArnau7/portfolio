@@ -1,6 +1,7 @@
 import React from "react";
 import {Link, Navigate} from 'react-router-dom'
 import styled from "styled-components";
+import Switch from "./SwitchTheme";
 
 const NavBar = () => {
     
@@ -11,6 +12,7 @@ const NavBar = () => {
         <NavContainer>
         
         <div>
+        <Switch></Switch>
             <p>
             
             <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-sun" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ff2301" fill="none" stroke-linecap="round" stroke-linejoin="round">
@@ -27,15 +29,15 @@ const NavBar = () => {
             </p>
         </div>
 
-            <a className="direccionadores" href="">cv</a>
+            <a className="direccionadorCv" href="">cv</a>
 
-            <a className="direccionadores" href="/Proyectos">Proyectos</a>
+            <a className="direccionadorProyectos" href="/Proyectos">Proyectos</a>
 
-            <a className="direccionadores" href="/">Foto</a>
+            <a className="direccionadorFoto" href="/">Foto</a>
 
-            <a className="direccionadores" href="/About">SobreMi</a>
+            <a className="direccionadorSobreMi" href="/About">SobreMi</a>
 
-            <a className="direccionadores" href="/Contacto">Contacto</a>
+            <a className="direccionadorContacto" href="/Contacto">Contacto</a>
 
         <div>
             <p className="botonesen"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-language" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ff2301" fill="none" stroke-linecap="round" stroke-linejoin="round">
@@ -61,14 +63,45 @@ const NavContainer = styled.nav `
     align-items: center;
     background-color: #656565;
 
-.direccionadores{
+
+    a{
     font-size:1.5rem;
     color: #ff2301;
     position: relative;
     text-decoration: none;
 }
 
-.direccionadores::before {
+a::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 4px;
+    border-radius: 4px;
+    background-color: #ff2301;   
+    bottom: 0;
+    left: 0;
+    transform-origin: right;
+    transform: scaleX(0);
+    transition: transform .3s .1s;
+    }
+
+a:hover::before {
+    transform-origin: left;   
+    transform: scaleX(1);
+
+}  
+a:active{
+    text-decoration: none;
+    
+}
+/* .direccionadorCv{
+    font-size:1.5rem;
+    color: #ff2301;
+    position: relative;
+    text-decoration: none;
+}
+
+.direccionadorCv::before {
     content: '';
     position: absolute;
     width: 100%;
@@ -82,11 +115,115 @@ const NavContainer = styled.nav `
     transition: transform .3s ease-in-out ;
     }
 
-.direccionadores:hover::before {
+.direccionadorCv:hover::before {
     transform-origin: left;   
     transform: scaleX(1);
     
 }
+.direccionadorProyectos{
+    font-size:1.5rem;
+    color: #ff2301;
+    position: relative;
+    text-decoration: none;
+}
+
+.direccionadorProyectos::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 4px;
+    border-radius: 4px;
+    background-color: #ff2301;   
+    bottom: 0;
+    left: 0;
+    transform-origin: right;
+    transform: scaleX(0);
+    transition: transform .3s ease-in-out ;
+    }
+
+.direccionadorProyectos:hover::before {
+    transform-origin: left;   
+    transform: scaleX(1);
+    
+}
+.direccionadorFoto{
+    font-size:1.5rem;
+    color: #ff2301;
+    position: relative;
+    text-decoration: none;
+}
+
+.direccionadorFoto::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 4px;
+    border-radius: 4px;
+    background-color: #ff2301;   
+    bottom: 0;
+    left: 0;
+    transform-origin: right;
+    transform: scaleX(0);
+    transition: transform .3s ease-in-out ;
+    }
+
+.direccionadorFoto:hover::before {
+    transform-origin: left;   
+    transform: scaleX(1);
+    
+}
+.direccionadorSobreMi{
+    font-size:1.5rem;
+    color: #ff2301;
+    position: relative;
+    text-decoration: none;
+}
+
+.direccionadorSobreMi::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 4px;
+    border-radius: 4px;
+    background-color: #ff2301;   
+    bottom: 0;
+    left: 0;
+    transform-origin: right;
+    transform: scaleX(0);
+    transition: transform .3s ease-in-out ;
+    }
+
+.direccionadorSobreMi:hover::before {
+    transform-origin: left;   
+    transform: scaleX(1);
+    
+}
+.direccionadorContacto{
+    font-size:1.5rem;
+    color: #ff2301;
+    position: relative;
+    text-decoration: none;
+}
+
+.direccionadorContacto::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 4px;
+    border-radius: 4px;
+    background-color: #ff2301;   
+    bottom: 0;
+    left: 0;
+    transform-origin: right;
+    transform: scaleX(0);
+    transition: transform .3s ease-in-out ;
+    }
+
+.direccionadorContacto:hover::before {
+    transform-origin: left;   
+    transform: scaleX(1);
+    
+} */
 
 
     `
