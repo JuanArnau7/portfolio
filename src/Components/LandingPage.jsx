@@ -14,7 +14,7 @@ const LandingPage = () => {
         <LandingContainer>  
         <div className="contNoA">
 
-        <img src={foto} height="400px"  alt="Profile image not found"></img>
+        <img src={foto} height="450px"  alt="Profile image not found"></img>
 
 
         <div className="texto">
@@ -57,12 +57,19 @@ const LandingPage = () => {
 export default LandingPage
 
 const LandingContainer =styled.nav `
-background-color: white;
+/* background-color: #dcdcdc; */
+background-color: #3e4144;
 
-
+img{
+    border-radius: 50%;
+    border: dashed;
+    border-color: #ff2301;
+}
 .texto{
-    /* display: flex; */
+    color: #ff2301;
+    border: dashed;
     flex-direction: column;
+    margin: 100px;
 
 }
 .aCont{ 
@@ -71,8 +78,11 @@ background-color: white;
     justify-content: center;
     padding:2rem ;
     margin: 2rem;
+    
 }
 a{
+    border: dashed;
+    border-color: #ff2301;
     padding: 1rem;
     margin: 1rem;
     transition: transform 250ms, opacity 400ms;
@@ -83,13 +93,30 @@ a{
     flex-direction: row;
     justify-content: center;
     align-items: center;
+
 }
 
 
 a:hover{
     transform: scale(1.2);
     opacity: 1;
-    /* background-color: whitesmoke; */
-    /* border-radius:50%; */
+}
+
+h1{
+    font-size: 45px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+h2{
+    font-size: 35px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+h3{
+    font-size: 33px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+p{
+    font-size: 25px;
+    font-weight: 500;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 `

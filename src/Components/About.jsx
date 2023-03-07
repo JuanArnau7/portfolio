@@ -25,11 +25,10 @@ const About = () => {
     return (
         <>
         <NavBar></NavBar>
-            <h1>Soy About</h1>
         <AboutContainer>
+        <div className="container">
 
             <div className="sobre">
-
                 <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-presentation" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ff2301" fill="none" stroke-linecap="round" stroke-linejoin="round">
                 <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
                 <line x1="3" y1="4" x2="21" y2="4" />
@@ -38,9 +37,11 @@ const About = () => {
                 <line x1="9" y1="20" x2="15" y2="20" />
                 <path d="M8 12l3 -3l2 2l3 -3" />
                 </svg>
-                <span> Me gradue en Henry de desarrollador web full stack, pero me dedico al front end ya que es lo que me apasiona
+                <p> 
+                Me gradue en Henry de desarrollador web full stack, pero me dedico al front end ya que es lo que me apasiona
                 Descubri mi pasion por el desarrollo hace un año aproximadamente, mientras estudiaba la carrera de licenciatura
-                en informatica, realice varios cursos, </span>
+                en informatica, realice varios cursos, 
+                </p>
             </div>
 
             <div className="educacion">
@@ -53,6 +54,15 @@ const About = () => {
             <line x1="6" y1="12" x2="9" y2="12" />
             <line x1="6" y1="15" x2="8" y2="15" />
             </svg>
+            <ul>
+                <li><p>Full Stack Web Developer. Henry Bootcamp. 
+                        700 horas de cursado. 2022.</p></li>
+                <li><p>Licenciatura en Informática. Universidad Nacional de La Plata. 2020-actualidad.</p></li>
+                <li><p>Python. CoderHouse (Certificación). 2021</p></li>
+                <li><p>Todo en ciberseguridad. Udemy(Certificación). 2021</p></li>
+                <li><p>Ciencia de Datos. A2 Capacitación(Certificación). 2022</p></li>
+                <li><p>Productor Asesor de Seguros. AAPAS. 2021.</p></li>
+            </ul>
             </div>
 
             <div className="skills">
@@ -75,7 +85,9 @@ const About = () => {
                 <img alt="Skill icon not found" src={iconoTypeScript}></img>
             </div>
             </div>
-            
+        </div>
+        <div className="relleno"></div>
+
         </AboutContainer>
         <Footer></Footer>
         </>
@@ -85,28 +97,70 @@ const About = () => {
 export default About
 
 const AboutContainer = styled.nav`
-    display: flex;
-    justify-content: space-around;
-    .sobre{
-        border: 1px solid black;
-        width: 30%;
-        height: 700px;
+        background-color: #3e4144;
+        /* background-color: #dcdcdc; */
+
+    .container{
+        display: flex;
+        justify-content: space-around;
+        /* background-color: #3e4144; */
+        /* background-color: #dcdcdc; */
+        height: auto;
+        margin: auto;
+        padding: auto;
+        height: auto;
     }
-    .educacion{
-        border: 1px solid black;
+    .relleno{
+        height: 100px;
+        width: 100px;
+    }
+    .sobre{       
+        border: 2px dashed #ff2301;
         width: 30%;
-        height: 700px;
+        min-height: 700px;
+        height: 100%;
+        padding: 10px;
+        margin: 10px;
+        margin-top: 20px;
+        p{
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-size: 25px;
+            color: #ff2301;
+        }
+    }
+    li{
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-size: 25px;
+            color: #ff2301;
+    }
+    
+    .educacion{
+        border: 2px dashed #ff2301;
+        width: 30%;
+        min-height: 700px;
+        height: 100%;
+        padding: 10px;
+        margin: 10px;
+        margin-top: 20px;
+
     }
     .skills{
-        border: 1px solid black;
+        border: 2px dashed #ff2301;
         width: 30% ;
-        height: 700px;
+        min-height: 700px;
+        height: 100%;
+        padding: 10px;
+        margin: 10px;
+        margin-top: 20px;
+
     }
     img{
-        width: 150px;
-        height: 150px;
+        width: 10rem;
+        height: 7rem;
         border-radius: 15%;
         opacity: 1;
+        padding: 3px;
+        margin: 3px;
     }
     .icons-container{
         /* background-color: ; */

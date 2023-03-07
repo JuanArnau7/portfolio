@@ -11,9 +11,9 @@ const NavBar = () => {
         <>
         <NavContainer>
         
-        <div>
+        <div className="divisor">
         <Switch></Switch>
-            <p>
+            {/* <p>
             
             <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-sun" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ff2301" fill="none" stroke-linecap="round" stroke-linejoin="round">
             <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
@@ -26,9 +26,9 @@ const NavBar = () => {
             <path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z" />
             </svg>
             
-            </p>
-        </div>
+            </p> */}
 
+        </div>
             <a className="direccionadorCv" href="">cv</a>
 
             <a className="direccionadorProyectos" href="/Proyectos">Proyectos</a>
@@ -39,7 +39,7 @@ const NavBar = () => {
 
             <a className="direccionadorContacto" href="/Contacto">Contacto</a>
 
-        <div>
+        <div className="divisor">
             <p className="botonesen"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-language" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ff2301" fill="none" stroke-linecap="round" stroke-linejoin="round">
             <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
             <path d="M4 5h7" />
@@ -61,8 +61,10 @@ const NavContainer = styled.nav `
     display: flex;
     justify-content: space-around;    
     align-items: center;
-    background-color: #656565;
-
+    background-color: #3e4144;
+    /* background-color: #dcdcdc; */
+    border-bottom: dashed;
+    border-color: #ff2301;
 
     a{
     font-size:1.5rem;
@@ -94,136 +96,8 @@ a:active{
     text-decoration: none;
     
 }
-/* .direccionadorCv{
-    font-size:1.5rem;
-    color: #ff2301;
-    position: relative;
-    text-decoration: none;
-}
 
-.direccionadorCv::before {
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 4px;
-    border-radius: 4px;
-    background-color: #ff2301;   
-    bottom: 0;
-    left: 0;
-    transform-origin: right;
-    transform: scaleX(0);
-    transition: transform .3s ease-in-out ;
-    }
 
-.direccionadorCv:hover::before {
-    transform-origin: left;   
-    transform: scaleX(1);
-    
-}
-.direccionadorProyectos{
-    font-size:1.5rem;
-    color: #ff2301;
-    position: relative;
-    text-decoration: none;
-}
-
-.direccionadorProyectos::before {
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 4px;
-    border-radius: 4px;
-    background-color: #ff2301;   
-    bottom: 0;
-    left: 0;
-    transform-origin: right;
-    transform: scaleX(0);
-    transition: transform .3s ease-in-out ;
-    }
-
-.direccionadorProyectos:hover::before {
-    transform-origin: left;   
-    transform: scaleX(1);
-    
-}
-.direccionadorFoto{
-    font-size:1.5rem;
-    color: #ff2301;
-    position: relative;
-    text-decoration: none;
-}
-
-.direccionadorFoto::before {
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 4px;
-    border-radius: 4px;
-    background-color: #ff2301;   
-    bottom: 0;
-    left: 0;
-    transform-origin: right;
-    transform: scaleX(0);
-    transition: transform .3s ease-in-out ;
-    }
-
-.direccionadorFoto:hover::before {
-    transform-origin: left;   
-    transform: scaleX(1);
-    
-}
-.direccionadorSobreMi{
-    font-size:1.5rem;
-    color: #ff2301;
-    position: relative;
-    text-decoration: none;
-}
-
-.direccionadorSobreMi::before {
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 4px;
-    border-radius: 4px;
-    background-color: #ff2301;   
-    bottom: 0;
-    left: 0;
-    transform-origin: right;
-    transform: scaleX(0);
-    transition: transform .3s ease-in-out ;
-    }
-
-.direccionadorSobreMi:hover::before {
-    transform-origin: left;   
-    transform: scaleX(1);
-    
-}
-.direccionadorContacto{
-    font-size:1.5rem;
-    color: #ff2301;
-    position: relative;
-    text-decoration: none;
-}
-
-.direccionadorContacto::before {
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 4px;
-    border-radius: 4px;
-    background-color: #ff2301;   
-    bottom: 0;
-    left: 0;
-    transform-origin: right;
-    transform: scaleX(0);
-    transition: transform .3s ease-in-out ;
-    }
-
-.direccionadorContacto:hover::before {
-    transform-origin: left;   
-    transform: scaleX(1);
-    
-} */
 
 
     `

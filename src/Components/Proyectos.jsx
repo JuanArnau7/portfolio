@@ -14,13 +14,13 @@ const Proyectos = () => {
     return (
         <>
         <NavBar> </NavBar>
-        <div className="fondo"> 
-            <h1>Proyectos</h1>
         <ProyectosContainer>
+            {/* <h1>Proyectos</h1> */}
+        <div className="fondo"> 
 
             <div className="contImgs">
-                <img src={pi} height="350px" className="imgs" alt="Proyect image not found"></img>
-                <span>Este proyecto fue desarrollado y diseñado por mi</span>
+                <p>Henry Recipes</p>
+                <img src={pi} height="400px" className="imgs" alt="Proyect image not found"></img>
                 <div className="botonesContainer">
                 <a href="https://github.com/JuanArnau7/PI-Food">
                     <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-github" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ff2301" fill="none" stroke-linecap="round" stroke-linejoin="round">
@@ -39,8 +39,8 @@ const Proyectos = () => {
                 </div>
             </div>
             <div className="contImgs">
-                <img src={pf} height="350px" className="imgs" alt="Proyect image not found"></img>
-                <span>Este proyecto fue desarrollado y diseñado en equipo</span>
+                <p>Henry Food's</p>
+                <img src={pf} height="400px" className="imgs" alt="Proyect image not found"></img>
                 <div className="botonesContainer">
                 <a href="https://github.com/JuanArnau7/HenryClient">
                     <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-github" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ff2301" fill="none" stroke-linecap="round" stroke-linejoin="round">
@@ -59,8 +59,11 @@ const Proyectos = () => {
                 </div>
                 
             </div>
-        </ProyectosContainer>
         </div>
+        <div className="relleno">
+            {/* <p>hola</p> */}
+        </div>
+        </ProyectosContainer>
         <Footer></Footer>
         </>
     )
@@ -69,20 +72,26 @@ const Proyectos = () => {
 export default Proyectos
 
 const ProyectosContainer = styled.nav `
-    display: flex;
-    align-items: center;
-    justify-content: center;
 
-    .fondo{
-        /* background: #ccc; */
-        /* background-color: black; */
-        /* height: 100%; */
-        /* width: 100%; */
+    /* background-color: #dcdcdc; */
+    background-color: #3e4144;
+
+    
+    .relleno{ 
+        height: 320px;
+        width: 100px;
     }
+    .fondo{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+    }
+        
     
     .contImgs{
-        margin: 15px;
-        padding: 10px;
+        margin: 10px;
+        padding: 5px;
         border: 2px solid #ff2301;
         display: flex;
         flex-direction: column;
@@ -107,4 +116,15 @@ const ProyectosContainer = styled.nav `
         opacity: 1;
     }
 
+    p{
+        font-family: 'Courier New', Courier, monospace;
+        /* font:"Copperplate" ; */
+        font-size : 25px;
+        font-weight: 900;
+        margin: 10px;
+    }
+    span {
+        margin: 10px;
+        
+    }
 `
