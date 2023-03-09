@@ -1,4 +1,5 @@
-import { useEffect, dispatch } from "react"
+import { useEffect } from "react"
+// import { Dispatch } from "react"
 
 const Switch = () => {
 
@@ -11,7 +12,7 @@ const Switch = () => {
 			}
 			darkTheme()
 		}
-	}, [dispatch, dark])
+	}, [dark])
 	
 
 

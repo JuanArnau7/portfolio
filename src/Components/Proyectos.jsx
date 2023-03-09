@@ -20,7 +20,7 @@ const Proyectos = () => {
 
             <div className="contImgs">
                 <p>Henry Recipes</p>
-                <img src={pi} height="400px" className="imgs" alt="Proyect image not found"></img>
+                <img src={pi} height="400px" className="imgs" alt="Proyect not found"></img>
                 <div className="botonesContainer">
                 <a href="https://github.com/JuanArnau7/PI-Food">
                     <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-github" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ff2301" fill="none" stroke-linecap="round" stroke-linejoin="round">
@@ -40,7 +40,7 @@ const Proyectos = () => {
             </div>
             <div className="contImgs">
                 <p>Henry Food's</p>
-                <img src={pf} height="400px" className="imgs" alt="Proyect image not found"></img>
+                <img src={pf} height="400px" className="imgs" alt="Proyect not found"></img>
                 <div className="botonesContainer">
                 <a href="https://github.com/JuanArnau7/HenryClient">
                     <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-github" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ff2301" fill="none" stroke-linecap="round" stroke-linejoin="round">

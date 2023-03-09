@@ -1,5 +1,4 @@
 import React from "react";
-import {Link, Navigate} from 'react-router-dom'
 import styled from "styled-components";
 import Switch from "./SwitchTheme";
 
@@ -29,7 +28,7 @@ const NavBar = () => {
             </p> */}
 
         </div>
-            <a className="direccionadorCv" href="">cv</a>
+            <a className="direccionadorCv" href="#">cv</a>
 
             <a className="direccionadorProyectos" href="/Proyectos">Proyectos</a>
 
