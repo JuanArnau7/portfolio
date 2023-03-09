@@ -61,7 +61,7 @@ const NavContainer = styled.nav `
     display: flex;
     justify-content: space-around;    
     align-items: center;
-    background-color: #3e4144;
+    /* background-color: #3e4144; */
     /* background-color: #dcdcdc; */
     border-bottom: dashed;
     border-color: #ff2301;

@@ -58,7 +58,7 @@ export default LandingPage
 
 const LandingContainer =styled.nav `
 /* background-color: #dcdcdc; */
-background-color: #3e4144;
+/* background-color: #3e4144; */
 
 img{
     border-radius: 50%;

@@ -97,8 +97,8 @@ const About = () => {
 export default About
 
 const AboutContainer = styled.nav`
-        background-color: #3e4144;
-        /* background-color: #dcdcdc; */
+        /* background-color: #3e4144; */
+        background-color: #dcdcdc;
 
     .container{
         display: flex;

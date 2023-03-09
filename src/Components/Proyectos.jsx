@@ -74,7 +74,7 @@ export default Proyectos
 const ProyectosContainer = styled.nav `
 
     /* background-color: #dcdcdc; */
-    background-color: #3e4144;
+    /* background-color: #3e4144; */
 
     
     .relleno{ 

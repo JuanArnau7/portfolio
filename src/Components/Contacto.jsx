@@ -36,7 +36,7 @@ const Contacto = () => {
 export default Contacto
 
 const ContactoContainer = styled.nav`
-    background-color: #3e4144;
+    /* background-color: #3e4144; */
     /* background-color: #dcdcdc; */
     height: 850px;
     /* position: relative; */
@@ -45,7 +45,7 @@ const ContactoContainer = styled.nav`
         
     }
     .izquierda{
-        display: flex;
+        display: flexnpm;
         flex-direction: column;
     }
 
