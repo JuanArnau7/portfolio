@@ -39,7 +39,7 @@ const NavBar = () => {
             <a className="direccionadorContacto" href="/Contacto">Contacto</a>
 
         <div className="divisor">
-            <p className="botonesen"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-language" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ff2301" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <p className="botonesen"><svg xmlns="http://www.w3.org/2000/svg" className="icon icon-tabler icon-tabler-language" width="44" height="44" viewBox="0 0 24 24" strokeWidth="1.5" stroke="#ff2301" fill="none" strokeLinecap="round" strokeLinejoin="round">
             <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
             <path d="M4 5h7" />
             <path d="M9 3v2c0 4.418 -2.239 8 -5 8" />
