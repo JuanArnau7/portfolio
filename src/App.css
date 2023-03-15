@@ -1,13 +1,12 @@
-:root{
-  /* --primary-color: #dcdcdc; */
-  /* --secondary-color: #fff; */
-  --background-color: #dcdcdc;
+html{
+  background-color: #dcdcdc;
+}
+html.dark{
+  
+  background-color: #3e4144;
+  
+}
 
-}
-html[data-theme="dark"]{
-  --background-color: #3e4144;
-  --secondary-color: #fff;
-}
 .App {
   text-align: center;
 }

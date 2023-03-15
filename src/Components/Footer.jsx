@@ -27,8 +27,6 @@ width: 100%;
 align-items: center;
 border-top: dashed;
 border-color: #ff2301;
-/* background-color: #3e4144; */
-    /* background-color: #dcdcdc; */
 
 a{
     text-decoration: none;

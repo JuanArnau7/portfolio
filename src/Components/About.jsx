@@ -29,7 +29,7 @@ const About = () => {
         <div className="container">
 
             <div className="sobre">
-                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-presentation" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ff2301" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                <svg xmlns="http://www.w3.org/2000/svg" className="icon icon-tabler icon-tabler-presentation" width="44" height="44" viewBox="0 0 24 24" strokeWidth="1.5" stroke="#ff2301" fill="none" strokeLinecap="round" strokeLinejoin="round">
                 <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
                 <line x1="3" y1="4" x2="21" y2="4" />
                 <path d="M4 4v10a2 2 0 0 0 2 2h12a2 2 0 0 0 2 -2v-10" />
@@ -45,7 +45,7 @@ const About = () => {
             </div>
 
             <div className="educacion">
-            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-certificate" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ff2301" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <svg xmlns="http://www.w3.org/2000/svg" className="icon icon-tabler icon-tabler-certificate" width="44" height="44" viewBox="0 0 24 24" strokeWidth="1.5" stroke="#ff2301" fill="none" strokeLinecap="round" strokeLinejoin="round">
             <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
             <circle cx="15" cy="15" r="3" />
             <path d="M13 17.5v4.5l2 -1.5l2 1.5v-4.5" />
@@ -66,7 +66,7 @@ const About = () => {
             </div>
 
             <div className="skills">
-            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-tabler" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ff2301" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <svg xmlns="http://www.w3.org/2000/svg" className="icon icon-tabler icon-tabler-brand-tabler" width="44" height="44" viewBox="0 0 24 24" strokeWidth="1.5" stroke="#ff2301" fill="none" strokeLinecap="round" strokeLinejoin="round">
             <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
             <path d="M8 9l3 3l-3 3" />
             <line x1="13" y1="15" x2="16" y2="15" />
@@ -97,14 +97,10 @@ const About = () => {
 export default About
 
 const AboutContainer = styled.nav`
-        /* background-color: #3e4144; */
-        background-color: #dcdcdc;
 
     .container{
         display: flex;
         justify-content: space-around;
-        /* background-color: #3e4144; */
-        /* background-color: #dcdcdc; */
         height: auto;
         margin: auto;
         padding: auto;
@@ -162,14 +158,5 @@ const AboutContainer = styled.nav`
         padding: 3px;
         margin: 3px;
     }
-    .icons-container{
-        /* background-color: ; */
-        /* max-width: fit-content; */
-        /* max-height: min-content ; */
-        /* display: flex; */
-        /* justify-content: space-evenly; */
-        /* max-width: min-content; */
 
-
-    }
 `

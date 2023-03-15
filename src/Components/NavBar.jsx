@@ -28,11 +28,11 @@ const NavBar = () => {
             </p> */}
 
         </div>
-            <a className="direccionadorCv" href="#">cv</a>
+            <a className="direccionadorCv" href="../CV-Juan-Pablo-Arnau-EN.pdf" download >cv</a>
 
             <a className="direccionadorProyectos" href="/Proyectos">Proyectos</a>
 
-            <a className="direccionadorFoto" href="/">Foto</a>
+            <a className="direccionadorFoto" href="/">Inicio</a>
 
             <a className="direccionadorSobreMi" href="/About">SobreMi</a>
 

@@ -3,11 +3,18 @@ import styled from "styled-components";
 import Footer from "./Footer";
 
 
-import NavBar from './NavBar'
+import NavBar from './NavBar';
+import emailjs from 'emailjs-com';
 
 const Contacto = () => {
 
+    function enviarEmail(e){
+        e.preventDefault();
 
+        emailjs.sendForm('service_birc1gw','template_igtbmr9',e.target,'BPisGsf_AmkKM40bT').then(res=>{
+            alert('se ha enviado correctamente.');
+        })
+    }
 
     return (
         <>
@@ -15,16 +22,23 @@ const Contacto = () => {
         <ContactoContainer>
 
             <div className="container">
-                <div className="izquierda">
-                    <label>titulo</label>
-                    <input></input>
-                    <label>tipo de trabajo</label>
-                    <input></input>
-                    <label>detalles</label>
-                    <input></input>
-                </div>
-                <div className="derecha">
-
+                <div className="containerForm">
+                    <h1>Formulario de Contacto</h1>
+                    <form onSubmit={enviarEmail}>
+                        <div>
+                            <label><b>Nombre</b></label>
+                            <input type="text" className="form-control" id="nombre" name="nombre"></input>
+                        </div>
+                        <div>
+                            <label><b>Email</b></label>
+                            <input type="email" className="form-control" id="email" name="email"></input>
+                        </div>
+                        <div>
+                            <label><b>Mensaje</b></label>
+                            <textarea type="text" className="form-control" id="mensaje" name="mensaje"></textarea>
+                        </div>
+                        <button type="submit" style={{width:"50%",margin:"0 auto", marginTop:"20px"}}>Enviar Correo</button>
+                    </form>
                 </div>
             </div>
         </ContactoContainer>
@@ -36,16 +50,25 @@ const Contacto = () => {
 export default Contacto
 
 const ContactoContainer = styled.nav`
-    /* background-color: #3e4144; */
-    /* background-color: #dcdcdc; */
-    height: 850px;
+    /* height: 100vh; */
+    /* width: 100vw; */
     /* position: relative; */
     .container{
         display: flex;
+        justify-content: center;
+        align-items: center;
+
+        /* height: 80%  ; */
+        /* width: 100%; */
+        
+        background-color: aliceblue;
         
     }
-    .izquierda{
-        display: flexnpm;
+    .containerForm{
+        background-color: antiquewhite;
+        height: 30rem;
+        width: 30rem;
+        display: flex;
         flex-direction: column;
     }
 
