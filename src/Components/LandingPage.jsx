@@ -70,6 +70,7 @@ img{
     border: dashed;
     flex-direction: column;
     margin: 100px;
+    padding: 1px 30px;
 
 }
 .aCont{ 

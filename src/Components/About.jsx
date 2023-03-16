@@ -38,9 +38,12 @@ const About = () => {
                 <path d="M8 12l3 -3l2 2l3 -3" />
                 </svg>
                 <p> 
-                Me gradue en Henry de desarrollador web full stack, pero me dedico al front end ya que es lo que me apasiona
-                Descubri mi pasion por el desarrollo hace un año aproximadamente, mientras estudiaba la carrera de licenciatura
-                en informatica, realice varios cursos, 
+                Me gradue en Henry de desarrollador Web Full Stack, tengo mas afinidad por el Front End.<br></br>
+                Descubrí que queria ser desarrollador hace dos años aproximadamente, mientras estudiaba la carrera de licenciatura
+                en informatica, decidí comenzar con algunos cursos basicos sobre Python, luego incursione en el mundo del procesamiento de Datos,
+                pero no me sentia completamente comodo, por lo que comence el Bootcamp y allí fue que encontre lo que estaba buscando.<br></br>
+                Planeo dedicarme al desarrollo en tiempo completo, en alguna empresa en la cual pueda continuar desarrollando mis habilidades tecnicas.
+                
                 </p>
             </div>
 

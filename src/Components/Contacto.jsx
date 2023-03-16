@@ -25,16 +25,16 @@ const Contacto = () => {
                 <div className="containerForm">
                     <h1>Formulario de Contacto</h1>
                     <form onSubmit={enviarEmail}>
-                        <div>
-                            <label><b>Nombre</b></label>
+                        <div className="campos">
+                            <label><b>Nombre:</b></label>
                             <input type="text" className="form-control" id="nombre" name="nombre"></input>
                         </div>
-                        <div>
-                            <label><b>Email</b></label>
+                        <div className="campos">
+                            <label><b>Email:</b></label>
                             <input type="email" className="form-control" id="email" name="email"></input>
                         </div>
-                        <div>
-                            <label><b>Mensaje</b></label>
+                        <div className="campos">
+                            <label><b>Mensaje:</b></label>
                             <textarea type="text" className="form-control" id="mensaje" name="mensaje"></textarea>
                         </div>
                         <button type="submit" style={{width:"50%",margin:"0 auto", marginTop:"20px"}}>Enviar Correo</button>
@@ -53,6 +53,12 @@ const ContactoContainer = styled.nav`
     /* height: 100vh; */
     /* width: 100vw; */
     /* position: relative; */
+    .campos{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
     .container{
         display: flex;
         justify-content: center;
@@ -61,15 +67,23 @@ const ContactoContainer = styled.nav`
         /* height: 80%  ; */
         /* width: 100%; */
         
-        background-color: aliceblue;
+        /* background-color: aliceblue; */
         
     }
+    .form-control{
+        height: 3vh;
+        width: 35vh;
+    }
     .containerForm{
-        background-color: antiquewhite;
+        background-color: rgba(0,0,0,0.2);
         height: 30rem;
         width: 30rem;
         display: flex;
         flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        color: #ff2301;
+        margin: 10rem;
     }
 
 `
