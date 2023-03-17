@@ -15,7 +15,6 @@ import iconoPostgresql from '../skills/Postgresql.png'
 import iconoReact from '../skills/React.png'
 import iconoTailwind from '../skills/Tailwind.png'
 import iconoTypeScript from '../skills/TypeScript.png'
-// import iconoReact from '../images/React.jpg'
 
 
 const About = () => {
@@ -47,7 +46,7 @@ const About = () => {
                 </p>
             </div>
 
-            <div className="educacion">
+            <div className="sobre">
             <svg xmlns="http://www.w3.org/2000/svg" className="icon icon-tabler icon-tabler-certificate" width="44" height="44" viewBox="0 0 24 24" strokeWidth="1.5" stroke="#ff2301" fill="none" strokeLinecap="round" strokeLinejoin="round">
             <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
             <circle cx="15" cy="15" r="3" />
@@ -68,7 +67,7 @@ const About = () => {
             </ul>
             </div>
 
-            <div className="skills">
+            <div className="sobre">
             <svg xmlns="http://www.w3.org/2000/svg" className="icon icon-tabler icon-tabler-brand-tabler" width="44" height="44" viewBox="0 0 24 24" strokeWidth="1.5" stroke="#ff2301" fill="none" strokeLinecap="round" strokeLinejoin="round">
             <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
             <path d="M8 9l3 3l-3 3" />
@@ -99,7 +98,7 @@ const About = () => {
 export default About
 
 const AboutContainer = styled.nav`
-    min-height: 86vh;
+    min-height: 84vh;
     a{
         color: #ff2301;
         
@@ -107,53 +106,35 @@ const AboutContainer = styled.nav`
     
     .container{
         display: flex;
-        justify-content: space-around;
-        height: auto;
-        margin: auto;
-        padding: auto;
-        height: auto;
+        margin: 10px;
+        padding: 5px;
+        @media(max-width:1200px){
+            flex-direction:column;
+        }
     }
 
-    .sobre{       
+    .sobre{  
+        @media(max-width:1200px){
+            max-width: 100%;
+        }
         border: 2px dashed #ff2301;
-        width: 30%;
-        min-height: 700px;
-        height: 100%;
+        max-width: 32%;
         padding: 10px;
         margin: 10px;
         margin-top: 20px;
+
         p{
             font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
             font-size: 25px;
             color: #ff2301;
         }
+        li{
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+                font-size: 25px;
+                color: #ff2301;
+        }
     }
-    li{
-        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-            font-size: 25px;
-            color: #ff2301;
-    }
-    
-    .educacion{
-        border: 2px dashed #ff2301;
-        width: 30%;
-        min-height: 700px;
-        height: 100%;
-        padding: 10px;
-        margin: 10px;
-        margin-top: 20px;
 
-    }
-    .skills{
-        border: 2px dashed #ff2301;
-        width: 30% ;
-        min-height: 700px;
-        height: 100%;
-        padding: 10px;
-        margin: 10px;
-        margin-top: 20px;
-
-    }
     img{
         width: 10rem;
         height: 7rem;

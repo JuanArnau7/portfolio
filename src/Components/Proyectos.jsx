@@ -21,7 +21,7 @@ const Proyectos = () => {
 
             <div className="contImgs">
                 <p><u>Henry Recipes</u></p>
-                <img src={pi} height="350" className="imgs" alt="Proyect not found"></img>
+                <img src={pi} className="imgs" alt="Proyect not found"></img>
                 <div className="botonesContainer">
                 <a href="https://github.com/JuanArnau7/PI-Food">
                     <svg xmlns="http://www.w3.org/2000/svg" className="icon icon-tabler icon-tabler-brand-github" width="44" height="44" viewBox="0 0 24 24" strokeWidth="1.5" stroke="#ff2301" fill="none" strokeLinecap="round" strokeLinejoin="round">
@@ -41,7 +41,7 @@ const Proyectos = () => {
             </div>
             <div className="contImgs">
                 <p><u>Henry Food's</u></p>
-                <img src={pf} height="350" className="imgs" alt="Proyect not found"></img>
+                <img src={pf} className="imgs" alt="Proyect not found"></img>
                 <div className="botonesContainer">
                 <a href="https://github.com/JuanArnau7/HenryClient">
                     <svg xmlns="http://www.w3.org/2000/svg" className="icon icon-tabler icon-tabler-brand-github" width="44" height="44" viewBox="0 0 24 24" strokeWidth="1.5" stroke="#ff2301" fill="none" strokeLinecap="round" strokeLinejoin="round">
@@ -58,11 +58,10 @@ const Proyectos = () => {
                     </svg>
                 </a>
                 </div>
-                
             </div>
             <div className="contImgs">
                 <p><u>Portafolio</u></p>
-                <img src={portafolio} height="350" className="imgs" alt="Proyect not found"></img>
+                <img src={portafolio} className="imgs" alt="Proyect not found"></img>
                 <div className="botonesContainer">
                 <a href="https://github.com/JuanArnau7/portfolio">
                     <svg xmlns="http://www.w3.org/2000/svg" className="icon icon-tabler icon-tabler-brand-github" width="44" height="44" viewBox="0 0 24 24" strokeWidth="1.5" stroke="#ff2301" fill="none" strokeLinecap="round" strokeLinejoin="round">
@@ -79,7 +78,6 @@ const Proyectos = () => {
                     </svg>
                 </a>
                 </div>
-                
             </div>
         </div>
         </ProyectosContainer>
@@ -104,21 +102,30 @@ const ProyectosContainer = styled.nav `
         
     
     .contImgs{
-        margin: 50px;
+        margin: 10px;
         padding: 5px;
         border: 2px solid #ff2301;
         display: flex;
         flex-direction: column;
-        border-radius: 0.5rem;
+        /* border-radius: 0.5rem; */
         flex-wrap: wrap;
         /* height: 100px; */
     }
     
     .imgs{
 
+        height: 400px;
         border: 2px solid #ff2301;
         margin: 5px 5px;
-        
+        @media(max-width:1000px){
+            height: 200px;
+        }
+        @media(max-width:760px){
+            height: 170px;
+        }
+        @media(max-width:500px){
+            height: 150px;
+        }
     }
 
     .botonesContainer{
@@ -142,8 +149,5 @@ const ProyectosContainer = styled.nav `
         font-weight: 900;
         margin: 10px;
     }
-    span {
-        margin: 10px;
-        
-    }
+
 `

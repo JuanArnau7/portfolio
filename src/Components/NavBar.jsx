@@ -1,13 +1,18 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 import BurguerButton from "./BurgerButton";
-import SwitchLang from "./SwitchLang";
+// import SwitchLang from "./SwitchLang";
 import Switch from "./SwitchTheme";
 
 const NavBar = () => {
     
     const [clicked, setClicked] = useState(false)
+    // const [clicked1, setClicked1] = useState(false)
 
+    // const handleClick1 = () => {
+    //     setClicked(!clicked1)
+    // }
+    
     const handleClick = () => {
         setClicked(!clicked)
     }
@@ -23,7 +28,7 @@ const NavBar = () => {
             <a href="/About">SobreMi</a>
             <a href="/Contacto">Contacto</a>
         </div>
-            <SwitchLang></SwitchLang>
+            {/* <SwitchLang></SwitchLang> */}
         
         <div className="burguer">
             <BurguerButton clicked={clicked} handleClick={handleClick}/>

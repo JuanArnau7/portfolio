@@ -58,13 +58,14 @@ const LandingPage = () => {
 export default LandingPage
 
 const LandingContainer =styled.nav `
-/* z-index: 99; */
-/* min-height: 79vh; */
 img{
     border-radius: 50%;
     border: dashed;
     border-color: #ff2301;
-    margin: 5px 70px;
+    margin: 3px 50px;
+    @media(max-width: 850px){
+        height: 350px;
+    }
 }
 .contTexto{
     color: #ff2301;
@@ -92,11 +93,19 @@ a{
 }
 .contNoA{
     display: flex;
+    /* flex-direction: column; */
     justify-content: center;    
     align-items: center;
     margin-top: 70px;
     /* margin: 70px; */
 
+    @media(max-width:1070px){
+        /* display: flex; */
+        justify-content: center;
+        align-items: center;
+        flex-direction:column ;
+        /* padding: 3px 3px; */
+    }
 }
 
 
