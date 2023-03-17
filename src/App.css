@@ -1,9 +1,11 @@
 html{
-  background-color: #dcdcdc;
+  background-color: #cfcfcf;
+  min-height: 100vh;
 }
 html.dark{
   
-  background-color: #3e4144;
+  min-height: 100vh;
+  background-color: #252850;
   
 }
 

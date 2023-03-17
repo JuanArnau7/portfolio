@@ -58,7 +58,7 @@ const About = () => {
             <line x1="6" y1="15" x2="8" y2="15" />
             </svg>
             <ul>
-                <li><p>Full Stack Web Developer. Henry Bootcamp. 
+                <li><p><a href="https://certificates.soyhenry.com/cert?id=2c4aa596-072d-4839-b46b-e372d045afba">Full Stack Web Developer</a>. Henry Bootcamp. 
                         700 horas de cursado. 2022.</p></li>
                 <li><p>Licenciatura en Informática. Universidad Nacional de La Plata. 2020-actualidad.</p></li>
                 <li><p>Python. CoderHouse (Certificación). 2021</p></li>
@@ -89,7 +89,6 @@ const About = () => {
             </div>
             </div>
         </div>
-        <div className="relleno"></div>
 
         </AboutContainer>
         <Footer></Footer>
@@ -100,7 +99,12 @@ const About = () => {
 export default About
 
 const AboutContainer = styled.nav`
-
+    min-height: 86vh;
+    a{
+        color: #ff2301;
+        
+    }
+    
     .container{
         display: flex;
         justify-content: space-around;
@@ -109,10 +113,7 @@ const AboutContainer = styled.nav`
         padding: auto;
         height: auto;
     }
-    .relleno{
-        height: 100px;
-        width: 100px;
-    }
+
     .sobre{       
         border: 2px dashed #ff2301;
         width: 30%;

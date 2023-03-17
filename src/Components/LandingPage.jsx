@@ -1,7 +1,7 @@
 import React from "react";
 
 import NavBar from './NavBar'
-import foto from '../images/fotocv.png'
+import foto from '../images/foto-cv-t.png'
 import styled from "styled-components";
 import Footer from "./Footer";
 const LandingPage = () => {
@@ -13,11 +13,12 @@ const LandingPage = () => {
         <NavBar></NavBar>
         <LandingContainer>  
         <div className="contNoA">
+        <div className="contImg">
 
         <img src={foto} height="450px"  alt="Profile not found"></img>
 
-
-        <div className="texto">
+        </div>
+        <div className="contTexto">
 
         <h1>Hola! Bienvenidos!👋</h1>
         <h2>Mi nombre es Juan Pablo Arnau 👨‍💻</h2>
@@ -57,43 +58,44 @@ const LandingPage = () => {
 export default LandingPage
 
 const LandingContainer =styled.nav `
-/* background-color: #dcdcdc; */
-/* background-color: #3e4144; */
-
+/* z-index: 99; */
+/* min-height: 79vh; */
 img{
     border-radius: 50%;
     border: dashed;
     border-color: #ff2301;
+    margin: 5px 70px;
 }
-.texto{
+.contTexto{
     color: #ff2301;
     border: dashed;
     flex-direction: column;
-    margin: 100px;
-    padding: 1px 30px;
+    margin: 5px 70px;
+    padding: 15px 30px;
 
 }
 .aCont{ 
     display:flex;
-    flex-direction:row;
     justify-content: center;
-    padding:2rem ;
-    margin: 2rem;
+
+    padding:2rem  ;
+    margin: 2rem 2rem;
     
 }
 a{
     border: dashed;
     border-color: #ff2301;
     padding: 1rem;
-    margin: 1rem;
+    margin: 1.5rem 5rem;
     transition: transform 250ms, opacity 400ms;
 
 }
 .contNoA{
     display: flex;
-    flex-direction: row;
-    justify-content: center;
+    justify-content: center;    
     align-items: center;
+    margin-top: 70px;
+    /* margin: 70px; */
 
 }
 

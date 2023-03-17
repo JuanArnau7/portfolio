@@ -21,9 +21,9 @@ const Footer = () => {
 export default Footer
 
 const FooterContainer = styled.nav`
-position: absolute;
-bottom: 0;
+margin-top: auto;
 width: 100%;
+justify-content: center;
 align-items: center;
 border-top: dashed;
 border-color: #ff2301;
