@@ -22,7 +22,7 @@ const NavBar = () => {
         <NavContainer>
             <Switch></Switch>
         <div className={`links ${clicked ? 'active' : ''}`}>
-            <a href="../CV-Juan-Pablo-Arnau-EN.pdf" download >Decargar CV</a>
+            <a href="/CV" target={"_blank"}>Decargar CV</a>
             <a href="/Proyectos">Proyectos</a>
             <a href="/">Inicio</a>
             <a href="/About">SobreMi</a>

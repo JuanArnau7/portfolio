@@ -4,6 +4,7 @@ import LandingPage from './Components/LandingPage'
 import About from './Components/About'
 import Contacto from './Components/Contacto'
 import Proyectos from './Components/Proyectos'
+import Pdf from './Components/Pdf';
 // import About from './Components/About'
 
 function App() {
@@ -15,6 +16,7 @@ function App() {
         <Route exact path="/About" element={<About/>}/>
         <Route exact path="/Contacto" element={<Contacto/>}/>
         <Route exact path="/Proyectos" element={<Proyectos/>}/>
+        <Route exact path="/CV" element={<Pdf/>}/>
       </Routes>
     </BrowserRouter>
     </div>

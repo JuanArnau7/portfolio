@@ -1,11 +1,11 @@
 html{
-  background-color: #cfcfcf;
+  background: linear-gradient(to top left, #ddab92 85%, #200a59); /* #9c7460*/
   min-height: 100vh;
 }
 html.dark{
   
   min-height: 100vh;
-  background-color: #252850;
+  background: linear-gradient(to bottom right, #200a59 85%, #ddab92);
   
 }
 

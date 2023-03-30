@@ -37,11 +37,11 @@ const About = () => {
                 <path d="M8 12l3 -3l2 2l3 -3" />
                 </svg>
                 <p> 
-                Me gradue en Henry de desarrollador Web Full Stack, tengo mas afinidad por el Front End.<br></br>
-                Descubrí que queria ser desarrollador hace dos años aproximadamente, mientras estudiaba la carrera de licenciatura
-                en informatica, decidí comenzar con algunos cursos basicos sobre Python, luego incursione en el mundo del procesamiento de Datos,
-                pero no me sentia completamente comodo, por lo que comence el Bootcamp y allí fue que encontre lo que estaba buscando.<br></br>
-                Planeo dedicarme al desarrollo en tiempo completo, en alguna empresa en la cual pueda continuar desarrollando mis habilidades tecnicas.
+                Me gradué en Henry de desarrollador Web Full Stack, tengo más afinidad por el Front End.<br></br>
+                Descubrí que quería ser desarrollador hace dos años aproximadamente, mientras estudiaba la carrera de Licenciatura
+                en Informática, decidí comenzar con algunos cursos básicos sobre Python, luego incursioné en el mundo del procesamiento de datos,
+                pero no me sentía completamente cómodo, por lo que comencé el Bootcamp y allí fue que encontré lo que estaba buscando.<br></br>
+                Planeo dedicarme al desarrollo en tiempo completo, en alguna empresa en la cual pueda aportar con mis conocimientos y continuar desarrollando mis habilidades técnicas .
                 
                 </p>
             </div>
@@ -60,9 +60,9 @@ const About = () => {
                 <li><p><a href="https://certificates.soyhenry.com/cert?id=2c4aa596-072d-4839-b46b-e372d045afba">Full Stack Web Developer</a>. Henry Bootcamp. 
                         700 horas de cursado. 2022.</p></li>
                 <li><p>Licenciatura en Informática. Universidad Nacional de La Plata. 2020-actualidad.</p></li>
+                <li><p>Ciencia de Datos. A2 Capacitación(Certificación). 2022</p></li>
                 <li><p>Python. CoderHouse (Certificación). 2021</p></li>
                 <li><p>Todo en ciberseguridad. Udemy(Certificación). 2021</p></li>
-                <li><p>Ciencia de Datos. A2 Capacitación(Certificación). 2022</p></li>
                 <li><p>Productor Asesor de Seguros. AAPAS. 2021.</p></li>
             </ul>
             </div>
@@ -114,6 +114,11 @@ const AboutContainer = styled.nav`
     }
 
     .sobre{  
+        background: linear-gradient(
+                to bottom,
+                rgba(0,0,0,0.2),
+                rgba(0,0,0,0.2)
+                );
         @media(max-width:1200px){
             max-width: 100%;
         }
@@ -126,7 +131,8 @@ const AboutContainer = styled.nav`
         p{
             font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
             font-size: 25px;
-            color: #ff2301;
+            color: #ff1908;
+            
         }
         li{
             font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
