@@ -86,6 +86,7 @@ const Contenedor = styled.div`
     justify-content: center;
     align-items: center;
     margin-bottom: 0;
+    margin-left: 10px;
     p{
         justify-content: center;
         align-items: center ;

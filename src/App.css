@@ -1,11 +1,14 @@
 html{
-  background: linear-gradient(to top left, #ddab92 85%, #200a59); /* #9c7460*/
+  /* background: linear-gradient(to top left, #ddab92 85%, #200a59); #9c7460 */
+  background-color: #1b1a17;
   min-height: 100vh;
+  scroll-behavior: smooth;
 }
 html.dark{
   
   min-height: 100vh;
-  background: linear-gradient(to bottom right, #200a59 85%, #ddab92);
+  /* background: linear-gradient(to bottom right, #200a59 85%, #ddab92); */
+  background-color: #F0E3CA;
   
 }
 

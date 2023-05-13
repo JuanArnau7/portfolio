@@ -1,6 +1,6 @@
 import React from "react";
-import Footer from "./Footer";
-import NavBar from './NavBar'
+// import Footer from "./Footer";
+// import NavBar from './NavBar'
 
 import pi from '../images/PI-Henry.png'
 import pf from '../images/PF-Henry.png'
@@ -14,7 +14,7 @@ const Proyectos = () => {
 
     return (
         <>
-        <NavBar> </NavBar>
+        {/* <NavBar> </NavBar> */}
         <ProyectosContainer>
             {/* <h1>Proyectos</h1> */}
         <div className="fondo"> 
@@ -81,7 +81,7 @@ const Proyectos = () => {
             </div>
         </div>
         </ProyectosContainer>
-        <Footer></Footer>
+        {/* <Footer></Footer> */}
         </>
     )
 }

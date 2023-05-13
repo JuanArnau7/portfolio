@@ -1,8 +1,6 @@
 import React from "react";
-import Footer from "./Footer";
-
-
-import NavBar from './NavBar'
+// import Footer from "./Footer";
+// import NavBar from './NavBar'
 import styled from "styled-components";
 
 import iconoCss from '../skills/Css.png'
@@ -23,7 +21,7 @@ const About = () => {
 
     return (
         <>
-        <NavBar></NavBar>
+        {/* <NavBar></NavBar> */}
         <AboutContainer>
         <div className="container">
 
@@ -90,7 +88,7 @@ const About = () => {
         </div>
 
         </AboutContainer>
-        <Footer></Footer>
+        {/* <Footer></Footer> */}
         </>
     )
 }

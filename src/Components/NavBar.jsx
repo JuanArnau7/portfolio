@@ -3,14 +3,36 @@ import styled from "styled-components";
 import BurguerButton from "./BurgerButton";
 // import SwitchLang from "./SwitchLang";
 import Switch from "./SwitchTheme";
-
+const sections = 
+    document.querySelectorAll("section"),
+    navLinks= document.querySelectorAll(".links a")
+const resetLinks = () =>
+navLinks.forEach(link => link.classList.remove("activo"));
+const handleScroll = () => {
+    const {pageYOffset } = window
+    sections.forEach(section=>
+        {const {id, offsetTop, clientHeight } = section;
+        const offset = offsetTop -1;
+        if (
+            pageYOffset >= offset &&
+            pageYOffset < offset + clientHeight){
+                resetLinks();
+                navLinks.forEach(link => {
+                    if (link.dataset.scroll === id){
+                        link.classList.add("activo");
+                    }
+                });
+            }
+        });
+    };
+document.addEventListener("scroll", handleScroll);
 const NavBar = () => {
     
     const [clicked, setClicked] = useState(false)
     // const [clicked1, setClicked1] = useState(false)
 
     // const handleClick1 = () => {
-    //     setClicked(!clicked1)
+    //     setClicked1(!clicked1)
     // }
     
     const handleClick = () => {
@@ -20,13 +42,15 @@ const NavBar = () => {
     return (
         <>
         <NavContainer>
-            <Switch></Switch>
+        <Switch></Switch>
         <div className={`links ${clicked ? 'active' : ''}`}>
-            <a href="/CV" target={"_blank"}>Decargar CV</a>
-            <a href="/Proyectos">Proyectos</a>
-            <a href="/">Inicio</a>
-            <a href="/About">SobreMi</a>
-            <a href="/Contacto">Contacto</a>
+        <ul>
+            <li><a href="/CV" target={"_blank"}>Decargar CV</a></li> {/*onClick={handleClick1} className={`${clicked1 ? 'activo' : ''}`}*/}
+            <li><a data-scroll="Proyectos" href="#Proyectos">Proyectos</a></li> {/*onClick={handleClick1} className={`${clicked1 ? 'activo' : ''}`}*/}
+            <li><a data-scroll="Inicio" href="#Inicio">Inicio</a></li> {/*onClick={handleClick1} className={`${clicked1 ? 'activo' : ''}`}*/}
+            <li><a data-scroll="About" href="#About">SobreMi</a></li> {/*onClick={handleClick1} className={`${clicked1 ? 'activo' : ''}`}*/}
+            <li><a data-scroll="Contacto" href="#Contacto">Contacto</a></li> {/*onClick={handleClick1} className={`${clicked1 ? 'activo' : ''}`}*/}
+        </ul>
         </div>
             {/* <SwitchLang></SwitchLang> */}
         
@@ -44,12 +68,60 @@ const NavBar = () => {
 export default NavBar
 
 const NavContainer = styled.nav `
+    html{
+        scroll-behavior: smooth;
+    }
+    scroll-behavior: smooth;
+    z-index: 1000;
+    position: fixed;
+    top:0px;
+    left: 0px;
+    display: flex;
+    width: 100%;
+    background: linear-gradient(
+                to bottom,
+                rgba(31,30,27,1),
+                rgba(31,30,27.5)
+                );
     border-bottom: dashed;
     border-color: #ff2301;
-    padding: .4rem;
-    display: flex;
-    justify-content: space-around;
+    gap: 16px;
+    justify-content: space-between;
     align-items: center;
+    li{
+        justify-content: space-evenly;
+        align-items: center;
+        padding: 0px 25px;
+        a{
+            position: relative;
+        }
+    }
+    ul{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        list-style-type: none;
+    }
+    ul li a::before {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 3px;
+    border-radius: 4px;
+    background-color: #ff2301;   
+    bottom: 0;
+    left: 0;
+    transform-origin: right;
+    opacity: 0;
+    transition: .5s;
+    }
+    ul li a.activo::before,
+    ul li a:hover::before
+    {
+    width: 100%;
+    transform-origin: left;
+    opacity: 1 ;
+    }  
     a{
         color: #ff2301;
         text-decoration: none;
@@ -63,6 +135,7 @@ const NavContainer = styled.nav `
         margin-left: auto;
         margin-right: auto;
         text-align: center;
+        transition: all .5s ease;
         a{
             color: #ff2301;
             font-size: 2rem;
@@ -71,11 +144,11 @@ const NavContainer = styled.nav `
         @media(min-width: 1000px){
             position: initial;
             margin: 0;
-            display: block;
+            /* display: block; */
             a{
                 font-size: 1.5rem;
-                padding: 15px 15px;
-                margin: 5px 5px;
+                /* padding: 15px 15px; */
+                /* margin: 5px 5px; */
                 color: #ff2301;
                 display: inline;
             }
@@ -83,9 +156,12 @@ const NavContainer = styled.nav `
     }
     
     .links.active{
-        display: none;
+        ul{
+            flex-direction: column;
+        }
         width: 100%;
-        display: block;
+        display: flex;
+        flex-direction: column;
         position: absolute;
         margin-left: auto;
         margin-right: auto;
@@ -93,7 +169,7 @@ const NavContainer = styled.nav `
         left: 0;
         right: 0;
         text-align: center;
-        z-index: 26;
+        z-index: 1;
         a{
             font-size: 2rem;
             margin-top: 1rem;
@@ -125,26 +201,3 @@ const BgDiv = styled.div`
     }
     `
 
-// a::before {
-//     content: '';
-//     position: absolute;
-//     width: 100%;
-//     height: 3px;
-//     border-radius: 4px;
-//     background-color: #ff2301;   
-//     bottom: 0;
-//     left: 0;
-//     transform-origin: right;
-//     transform: scaleX(0);
-//     transition: transform .2s .1s;
-//     }
-
-// a:hover::before {
-//     transform-origin: left;   
-//     transform: scaleX(1);
-
-// }  
-// a:active{
-//     text-decoration: none;
-    
-// }    

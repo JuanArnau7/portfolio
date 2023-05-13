@@ -1,9 +1,7 @@
 import React from "react";
 import styled from "styled-components";
-import Footer from "./Footer";
-
-
-import NavBar from './NavBar';
+// import Footer from "./Footer";
+// import NavBar from './NavBar';
 import emailjs from 'emailjs-com';
 
 const Contacto = () => {
@@ -18,7 +16,7 @@ const Contacto = () => {
 
     return (
         <>
-        <NavBar></NavBar>
+        {/* <NavBar></NavBar> */}
         <ContactoContainer>
 
             <div className="container">
@@ -42,7 +40,7 @@ const Contacto = () => {
                 </div>
             </div>
         </ContactoContainer>
-        <Footer></Footer>
+        {/* <Footer></Footer> */}
         </>
     )
 }

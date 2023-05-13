@@ -4,6 +4,10 @@ import NavBar from './NavBar'
 import foto from '../images/foto-cv-t.png'
 import styled from "styled-components";
 import Footer from "./Footer";
+import Contacto from "./Contacto";
+import Proyectos from "./Proyectos";
+import About from "./About";
+
 const LandingPage = () => {
 
 
@@ -11,16 +15,20 @@ const LandingPage = () => {
     return (
         <>
         <NavBar></NavBar>
+        <section id="Inicio">
+
+        
         <LandingContainer>  
         <div className="contNoA">
         <div className="contImg">
 
-        <img src={foto} height="450px"  alt="Profile not found"></img>
+        <img src={foto} alt="Profile not found"></img>
 
         </div>
         <div className="contTexto">
 
         <h1>Hola! Bienvenidos!👋</h1>
+        <div id="rectangle">Bienvenidos<span></span></div>
         <h2>Mi nombre es Juan Pablo Arnau 👨‍💻</h2>
 
         <h3>💻Soy desarrollador full stack💻</h3>
@@ -50,6 +58,17 @@ const LandingPage = () => {
         </div>
 
         </LandingContainer>
+        </section>
+        <section id="About">
+            <About></About>
+        </section>
+        <section id="Proyectos">
+            <Proyectos></Proyectos>
+        </section>
+        <section id="Contacto">
+            <Contacto></Contacto>
+        </section>
+
         <Footer></Footer>
         </>
     )
@@ -58,7 +77,109 @@ const LandingPage = () => {
 export default LandingPage
 
 const LandingContainer =styled.nav `
-img{
+/* background-color: #1B1A17; */
+scroll-behavior: smooth;
+padding-top: 150px;
+.contImg{
+    width: 450px;
+	height: 450px;
+    margin: 5px 10px;
+	box-sizing: border-box;
+	border: 3px #ff2301 solid;
+	border-radius: 50%;
+	overflow: hidden;
+	box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
+	transform: translatey(0px);
+	animation: float 6s ease-in-out infinite;
+	img { width: 100%; height: 100%; 
+    }
+    @media(max-width: 850px){
+    height: 350px;
+    width: 350px;
+    } 
+}
+@keyframes float {
+	0% {
+		box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
+		transform: translatey(0px);
+	}
+	50% {
+		box-shadow: 0 25px 15px 0px rgba(0,0,0,0.2);
+		transform: translatey(-20px);
+	}
+	100% {
+		box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
+		transform: translatey(0px);
+	}
+}
+
+/* ANIMACION BIENVENIDOS */
+#rectangle {
+  position: relative;
+  float: left;
+  font-size: 18px;
+  font-family: "Lucida Console", Monaco, monospace;
+  background-color: white;
+}
+
+#rectangle > span {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  background-color: white;
+  border-left: 1px solid transparent;
+  animation: Fwrite 3s steps(14, start) infinite, Wbar 0.5s step-end infinite;
+    -webkit-animation: Fwrite 3s steps(14, start) infinite, Wbar 0.5s step-end infinite;
+}
+
+#rectangle > p:hover {
+  animation-play-state: paused;
+}
+
+@keyframes Fwrite {
+  0% {
+    width: 100%;
+  }
+  100% {
+    width: 0;
+  }
+}
+
+@keyframes Wbar {
+  0% {
+    border-left-color: transparent;
+  }
+  50% {
+    border-left-color: black;
+  }
+  100% {
+    border-left-color: transparent;
+  }
+}
+
+@-webkit-keyframes Fwrite {
+  0% {
+    width: 100%;
+  }
+  100% {
+    width: 0;
+  }
+}
+
+@-webkit-keyframes Wbar {
+  0% {
+    border-left-color: transparent;
+  }
+  50% {
+    border-left-color: black;
+  }
+  100% {
+    border-left-color: transparent;
+  }
+}
+/* FIN ANIMACION BIENVENIDOS */
+/* img{
     border-radius: 50%;
     border: dashed;
     border-color: #ff2301;
@@ -66,7 +187,7 @@ img{
     @media(max-width: 850px){
         height: 350px;
     }
-}
+} */
 .contTexto{
     color: #ff2301;
     border: dashed;
@@ -96,7 +217,7 @@ a{
     /* flex-direction: column; */
     justify-content: center;    
     align-items: center;
-    margin-top: 70px;
+    /* margin-top: 70px; */
     /* margin: 70px; */
 
     @media(max-width:1070px){
