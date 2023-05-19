@@ -1,7 +1,5 @@
 import React from "react";
 import styled from "styled-components";
-// import Footer from "./Footer";
-// import NavBar from './NavBar';
 import emailjs from 'emailjs-com';
 
 const Contacto = () => {
@@ -12,35 +10,75 @@ const Contacto = () => {
         emailjs.sendForm('service_birc1gw','template_igtbmr9',e.target,'BPisGsf_AmkKM40bT').then(res=>{
             alert('se ha enviado correctamente.');
         })
+        
+    }
+    const input = document.getElementById("#input")
+
+    const handleChange = (event) => {        
+        event.target.classList.toggle("has-value", event.target.value)
     }
 
     return (
         <>
-        {/* <NavBar></NavBar> */}
         <ContactoContainer>
 
             <div className="container">
                 <div className="containerForm">
                     <h1><u>Formulario de Contacto</u></h1>
                     <form onSubmit={enviarEmail}>
-                        <div className="campos">
-                            <label><b>Nombre:</b></label>
-                            <input type="text" className="form-control" id="nombre" name="nombre"></input>
+                        <div className="formulario">
+
+                        <div className="md-textbox">
+                            <input
+                                onInput={handleChange}
+                                id="input"
+                                type="text"
+                                name="nombre"
+                                className="letras"
+                            />
+                            {/* <span
+                            className="material-symbols-outlined">
+                            account_circle
+                            </span> */}
+                            <label htmlFor="input"> Nombre: </label>
                         </div>
-                        <div className="campos">
-                            <label><b>Email:</b></label>
-                            <input type="email" className="form-control" id="email" name="email"></input>
+                        <div className="md-textbox">
+                            <input
+                                onInput={handleChange}
+                                // id="input"
+                                type="email"
+                                name="email"
+                                className="letras"
+
+                            />
+                            {/* <span
+                            className="material-symbols-outlined">
+                            account_circle
+                            </span> */}
+                            <label htmlFor="input"> Email: </label>
                         </div>
-                        <div className="campos">
-                            <label><b>Mensaje:</b></label>
-                            <textarea type="text" className="form-control" id="mensaje" name="mensaje"></textarea>
+                        <div className="md-textbox">
+                            <input
+                                onInput={handleChange}
+                                // id="input"
+                                type="text-area"
+                                name="mensaje"
+                                className="letras"
+
+                            />
+                            {/* <span
+                            className="material-symbols-outlined">
+                            account_circle
+                            </span> */}
+                            <label htmlFor="input"> Mensaje: </label>
                         </div>
+                        {/* <input type="text" className="form-control" id="nombre" name="nombre"></input> */}
                         <button type="submit" className="botonEC" >Enviar Correo</button>
+                        </div>
                     </form>
                 </div>
             </div>
         </ContactoContainer>
-        {/* <Footer></Footer> */}
         </>
     )
 }
@@ -49,25 +87,68 @@ export default Contacto
 
 const ContactoContainer = styled.nav`
     min-height: 86vh;
-    .campos{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
+    padding-top: 80px;
+    .letras{
+        font-size: 20px;
     }
-    .container{
+    .formulario{
+        gap: 25px;
         display: flex;
-        justify-content: center;
-        align-items: center;
+        flex-direction:column;
+        padding: 7px 25px;
     }
-    #mensaje{
-        min-height: 35px;
-        max-height: 200px;
+    .md-textbox{
+        position: relative;
+    }
+    .md-textbox :is(label,span){
+        position: absolute;
+        top: 50%;
+        translate: 0 -50%;
+        pointer-events: none;
+        color: #ff2301;
+        transition: 0.3s;
+    }
 
-        min-width: 350px;
-        max-width: 450px;
-        border-width: 2px;
-        }
+    .md-textbox > label {
+        left: 10px;
+        translate: 0 -50%;
+        padding: 4px 8px;
+
+    }
+
+    .md-textbox > span {
+        right: 16px;
+        font-size: 28px;
+    }
+
+    .md-textbox > input {
+        height: 56px;
+        width: 220px;
+        padding-left: 16px;
+        border: 2px dashed #ff2301;
+        border-radius: 8px;
+        background: transparent;
+        color: #ff2301;
+    }
+    .md-textbox > :is(input:focus, .has-value){
+        border-color: #ff2301;
+    }
+    .md-textbox > :is(input:focus, .has-value)
+    ~span{
+        color : #ff2301;
+    }
+    .md-textbox > :is(input:focus, .has-value)
+    ~ label {
+        background-color: var(--background-form);
+        color: rgb(255, 255, 255 / 85%);
+        translate: 0 -46px;
+    }   
+    .md-textbox > input:invalid {
+        outline: 2px solid red;
+    }
+
+
+
     .form-control{
         height: 3vh;
         width: 35vh;
@@ -85,9 +166,13 @@ const ContactoContainer = styled.nav`
             border-color: #ff2301;
         }
     }
+    .container{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
     
     .containerForm{
-        background-color: rgba(0,0,0,0.2);
         height: 30rem;
         width: 30rem;
         display: flex;
@@ -107,7 +192,8 @@ const ContactoContainer = styled.nav`
     }
     .botonEC{
         cursor: pointer;
-        width:200px;
+        background-color: inherit;
+        width:242px;
         height: 30px;
         margin-top:10px;
         color: #ff2301;
@@ -116,11 +202,19 @@ const ContactoContainer = styled.nav`
         border-radius: 10px;
         border-style: solid;
         border-color: #ff2301;
+        
     }
     .botonEC:hover{
-        background-color: rgba(0,0,0,0.1);
+        background-color: inherit;
         color: #ff2301;
         border-style: dashed;
         border-color: #ff2301;
+        transform: scale(1.2);
     }
+
+    
+
+
+    
+
 `

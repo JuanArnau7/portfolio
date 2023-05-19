@@ -6,6 +6,9 @@ import pi from '../images/PI-Henry.png'
 import pf from '../images/PF-Henry.png'
 import portafolio from '../images/Portafolio.png'
 import styled from "styled-components";
+import { DiCss3, DiHtml5, DiJsBadge, DiMongodb, DiNodejs, DiPostgresql, DiReact } from "react-icons/di";
+import { SiGithub, SiTailwindcss } from "react-icons/si"
+import { HiOutlineWindow } from "react-icons/hi2"
 
 
 const Proyectos = () => {
@@ -16,72 +19,116 @@ const Proyectos = () => {
         <>
         {/* <NavBar> </NavBar> */}
         <ProyectosContainer>
-            {/* <h1>Proyectos</h1> */}
-        <div className="fondo"> 
+        <div className="fondo">
 
-            <div className="contImgs">
-                <p><u>Henry Recipes</u></p>
-                <img src={pi} className="imgs" alt="Proyect not found"></img>
-                <div className="botonesContainer">
-                <a href="https://github.com/JuanArnau7/PI-Food">
-                    <svg xmlns="http://www.w3.org/2000/svg" className="icon icon-tabler icon-tabler-brand-github" width="44" height="44" viewBox="0 0 24 24" strokeWidth="1.5" stroke="#ff2301" fill="none" strokeLinecap="round" strokeLinejoin="round">
-                    <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-                    <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" />
-                    </svg>
-                </a>
-                <a href="https://pi-front-six.vercel.app/">
-                    <svg xmlns="http://www.w3.org/2000/svg" className="icon icon-tabler icon-tabler-browser" width="44" height="44" viewBox="0 0 24 24" strokeWidth="1.5" stroke="#ff2301" fill="none" strokeLinecap="round" strokeLinejoin="round">
-                    <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-                    <rect x="4" y="4" width="16" height="16" rx="1" />
-                    <line x1="4" y1="8" x2="20" y2="8" />
-                    <line x1="8" y1="4" x2="8" y2="8" />
-                    </svg>
-                </a>
+            <article className="card">
+                <div className="card_inner">
+                    <div className="card_side card_side--front">
+                        <div className="card_image-wrapper">
+                            <img src={pf} alt="" className="card_image"></img>
+                        </div>
+                        <div className="card_body card_body--flex">
+                            <h2 className="card_title">Henry's Food</h2>
+                            <h3>Desarrollado con las siguientes tecnologias:</h3>
+                            <div className="iconos">
+                            <h6><b>HTML</b><DiHtml5 fontSize={'2rem'} color="e54d26"/></h6>                
+                            <h6><b>JavaScript</b><DiJsBadge fontSize={'2rem'} color='#ffff00'/></h6>
+                            <h6><b>React</b><DiReact fontSize={'2rem'} color="#61dbfb"/></h6>
+                            <h6><b>Node</b><DiNodejs fontSize={'2rem'} color="#8dc62b"/></h6>
+                            <h6><b>MongoDB</b><DiMongodb fontSize={'2rem'} color="#4DB33D"/></h6>
+                            <h6><b>Tailwind</b><SiTailwindcss fontSize={'2rem'} color="#3490dc"/></h6>
+                            </div>
+
+                            {/* <span className="card_arrow"> &rarr; </span> */}
+                        </div>
+                    </div>
+                    <div className="card_side card_side--back">
+                        <div className="card_body">
+                            <p>
+                                E-comerce que busca integrar las compras de un cliente con envio al domicilio o consumo en el local. 
+                                Además cuenta con un dashboard para el dueño del restaurant con gráficos y estadísticas.
+                            </p>
+                            <div className="iconos-backcard">
+
+                                <a href="">GitHub<SiGithub size="3rem" ></SiGithub></a>    <a href="">Deploy<HiOutlineWindow size="3rem"></HiOutlineWindow></a>
+                                </div>
+                        </div>
+                    </div>
                 </div>
-            </div>
-            <div className="contImgs">
-                <p><u>Henry Food's</u></p>
-                <img src={pf} className="imgs" alt="Proyect not found"></img>
-                <div className="botonesContainer">
-                <a href="https://github.com/JuanArnau7/HenryClient">
-                    <svg xmlns="http://www.w3.org/2000/svg" className="icon icon-tabler icon-tabler-brand-github" width="44" height="44" viewBox="0 0 24 24" strokeWidth="1.5" stroke="#ff2301" fill="none" strokeLinecap="round" strokeLinejoin="round">
-                    <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-                    <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" />
-                    </svg>
-                </a>
-                <a href="https://main-henry-client.vercel.app/">
-                    <svg xmlns="http://www.w3.org/2000/svg" className="icon icon-tabler icon-tabler-browser" width="44" height="44" viewBox="0 0 24 24" strokeWidth="1.5" stroke="#ff2301" fill="none" strokeLinecap="round" strokeLinejoin="round">
-                    <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-                    <rect x="4" y="4" width="16" height="16" rx="1" />
-                    <line x1="4" y1="8" x2="20" y2="8" />
-                    <line x1="8" y1="4" x2="8" y2="8" />
-                    </svg>
-                </a>
+            </article>
+
+            <article className="card">
+                <div className="card_inner">
+                    <div className="card_side card_side--front">
+                        <div className="card_image-wrapper">
+                            <img src={portafolio} alt="" className="card_image"></img>
+
+
+                        </div>
+                        <div className="card_body card_body--flex">
+                            <h2 className="card_title">Portafolio</h2>
+                            <h3>Desarrollado con las siguientes tecnologias:</h3>
+                            <div className="iconos">
+                            <h6><b>CSS</b><DiCss3 fontSize={'2rem'} color="#1b73ba"/></h6>
+                            <h6><b>HTML</b><DiHtml5 fontSize={'2rem'} color="e54d26"/></h6>                
+                            <h6><b>JavaScript</b><DiJsBadge fontSize={'2rem'} color='#ffff00'/></h6>
+                            <h6><b>React</b><DiReact fontSize={'2rem'} color="#61dbfb"/></h6>
+                            </div>
+                            {/* <span className="card_arrow"> &rarr; </span> */}
+                        </div>
+                    </div>
+                    <div className="card_side card_side--back">
+                        <div className="card_body">
+                                <p>
+                                Este es el portafolio en el cual se encuentra navegando actualmente.
+                                
+                                </p>
+                                <div className="iconos-backcard">
+
+                                <a href="">GitHub<SiGithub size="3rem" ></SiGithub></a>    <a href="">Deploy<HiOutlineWindow size="3rem"></HiOutlineWindow></a>
+                                </div>
+                        </div>
+                    </div>
                 </div>
-            </div>
-            <div className="contImgs">
-                <p><u>Portafolio</u></p>
-                <img src={portafolio} className="imgs" alt="Proyect not found"></img>
-                <div className="botonesContainer">
-                <a href="https://github.com/JuanArnau7/portfolio">
-                    <svg xmlns="http://www.w3.org/2000/svg" className="icon icon-tabler icon-tabler-brand-github" width="44" height="44" viewBox="0 0 24 24" strokeWidth="1.5" stroke="#ff2301" fill="none" strokeLinecap="round" strokeLinejoin="round">
-                    <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-                    <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" />
-                    </svg>
-                </a>
-                <a href="https://portfolio-juanarnau7.vercel.app/">
-                    <svg xmlns="http://www.w3.org/2000/svg" className="icon icon-tabler icon-tabler-browser" width="44" height="44" viewBox="0 0 24 24" strokeWidth="1.5" stroke="#ff2301" fill="none" strokeLinecap="round" strokeLinejoin="round">
-                    <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-                    <rect x="4" y="4" width="16" height="16" rx="1" />
-                    <line x1="4" y1="8" x2="20" y2="8" />
-                    <line x1="8" y1="4" x2="8" y2="8" />
-                    </svg>
-                </a>
+            </article>
+
+            <article className="card">
+                <div className="card_inner">
+                    <div className="card_side card_side--front">
+                        <div className="card_image-wrapper">
+                            <img src={pi} alt="" className="card_image"></img>
+                        </div>
+                        <div className="card_body card_body--flex">
+                            <h2 className="card_title">Recipes App</h2>
+                            <h3>Desarrollado con las siguientes tecnologias:</h3>
+                            <div className="iconos">
+                            <h6><b>CSS</b><DiCss3 fontSize={'2rem'} color="#1b73ba"/></h6>
+                            <h6><b>HTML</b><DiHtml5 fontSize={'2rem'} color="e54d26"/></h6>                
+                            <h6><b>JavaScript</b><DiJsBadge fontSize={'2rem'} color='#ffff00'/></h6>
+                            <h6><b>React</b><DiReact fontSize={'2rem'} color="#61dbfb"/></h6>
+                            <h6><b>Node</b><DiNodejs fontSize={'2rem'} color="#8dc62b"/></h6>
+                            <h6><b>Postgresql</b><DiPostgresql fontSize={'2rem'} color="#008bb9"/></h6>
+                            </div>
+
+                            {/* <span className="card_arrow"> &rarr; </span> */}
+                        </div>
+                    </div>
+                    <div className="card_side card_side--back">
+                        <div className="card_body">
+                                <p>
+                                    Aplicación de recetas, consumidas de una API.
+                                    Cuenta con la posibilidad de buscar, filtrar, ordenar y crear nuevas.
+                                </p>
+                                <div className="iconos-backcard">
+
+                                    <a href="">GitHub<SiGithub size="3rem" ></SiGithub></a>    <a href="">Deploy<HiOutlineWindow size="3rem"></HiOutlineWindow></a>
+                                </div>
+                        </div>
+                    </div>
                 </div>
-            </div>
-        </div>
+            </article>
+        </div>            
         </ProyectosContainer>
-        {/* <Footer></Footer> */}
         </>
     )
 }
@@ -89,10 +136,137 @@ const Proyectos = () => {
 export default Proyectos
 
 const ProyectosContainer = styled.nav `
-    min-height: 85vh;
+    padding-top: 80px;
+    .iconos{ 
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        align-items: center;
+        margin: 0px;
+        color: var(--text-primary-about);        
+        h6{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-direction: column-reverse;
+            margin: 0px;
+            svg{
 
-    
+                padding: 5px;
+            }
+        }
+    }
+    .iconos-backcard{
+        display: flex;
+        justify-content: space-around;
+        a{
+            display: flex;
+            flex-direction: column-reverse;
+            align-items: center;
+            text-decoration: none;
+            color: var(--text-primary-about);
+            font-size: 2rem;
+            
+
+        }
+    }
     .fondo{
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-around;
+    }
+    img{
+        height: 100%;
+        width: 100%;
+    }
+    .card_image{
+        display: block;
+        max-width: 600px;
+    }
+    .card_image-wrapper{
+        position: relative;
+        left: 0;
+        top: 0;
+        height: 100%;
+        width: 100%;
+    }
+
+    .card{
+        width: 600px;
+        height: 600px;
+        color: #151515;
+        perspective: 800px;
+    }
+
+    .card_inner{
+        position: relative;
+        height: 100%;
+        width: 100%;
+        transform-style: preserve-3d;
+        transition: transform 0.5s
+    }
+
+    .card:hover .card_inner{
+        transform: rotateY(-180deg);
+    }
+    .card_side {
+        position: absolute;
+        inset: 0;
+        background-color: rgba(0, 0, 0, 0.3);
+        display: grid;
+        grid-template-rows: 180px 1fr;
+        backface-visibility: hidden;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.8);
+    }
+    .card_side--front{
+        display: flex;
+        flex-direction: column;
+        margin: 25px;
+    }
+    .card_side--back{
+        transform: rotateY(180deg);
+        display: flex;
+        flex-direction: column;
+        margin: 25px;
+        align-items: center;
+        justify-content: center;
+
+    }
+    .card_body{
+        padding: 16px;
+        font-size: 2rem;
+        p{
+            font-size: 2rem;
+            color: var(--text-primary-about);
+        }
+    }
+    .card_body--flex {
+        height: 100%;
+        width: 100%;
+        padding: 0px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        flex-direction: column;
+        h2{
+            color: var(--text-primary-about);
+            font-size: 2.5rem;
+        }
+        h3{
+            color: var(--text-primary-about);
+
+            font-size: 1.5rem;
+        }
+    }
+    .card_title {
+        font-size: 26px;
+        text-transform: capitalize;
+        padding: 10px;
+        margin: 0px;
+    }  
+    /* .fondo{
         display: flex;
         flex-wrap: wrap;
         align-items: center;
@@ -107,9 +281,7 @@ const ProyectosContainer = styled.nav `
         border: 2px solid #ff2301;
         display: flex;
         flex-direction: column;
-        /* border-radius: 0.5rem; */
         flex-wrap: wrap;
-        /* height: 100px; */
     }
     
     .imgs{
@@ -143,11 +315,10 @@ const ProyectosContainer = styled.nav `
 
     p{
         font-family: 'Courier New', Courier, monospace;
-        /* font:"Copperplate" ; */
         color: #ff2301;
         font-size : 25px;
         font-weight: 900;
         margin: 10px;
-    }
+    } */
 
 `

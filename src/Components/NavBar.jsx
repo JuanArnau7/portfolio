@@ -29,14 +29,15 @@ document.addEventListener("scroll", handleScroll);
 const NavBar = () => {
     
     const [clicked, setClicked] = useState(false)
-    // const [clicked1, setClicked1] = useState(false)
-
-    // const handleClick1 = () => {
-    //     setClicked1(!clicked1)
-    // }
     
     const handleClick = () => {
         setClicked(!clicked)
+    }
+    const handleClick1 = () => {
+        if(clicked){
+
+            setClicked(!clicked) 
+        }   
     }
     
     return (
@@ -45,11 +46,11 @@ const NavBar = () => {
         <Switch></Switch>
         <div className={`links ${clicked ? 'active' : ''}`}>
         <ul>
-            <li><a href="/CV" target={"_blank"}>Decargar CV</a></li> {/*onClick={handleClick1} className={`${clicked1 ? 'activo' : ''}`}*/}
-            <li><a data-scroll="Proyectos" href="#Proyectos">Proyectos</a></li> {/*onClick={handleClick1} className={`${clicked1 ? 'activo' : ''}`}*/}
-            <li><a data-scroll="Inicio" href="#Inicio">Inicio</a></li> {/*onClick={handleClick1} className={`${clicked1 ? 'activo' : ''}`}*/}
-            <li><a data-scroll="About" href="#About">SobreMi</a></li> {/*onClick={handleClick1} className={`${clicked1 ? 'activo' : ''}`}*/}
-            <li><a data-scroll="Contacto" href="#Contacto">Contacto</a></li> {/*onClick={handleClick1} className={`${clicked1 ? 'activo' : ''}`}*/}
+            <li><a onClick={handleClick1} href="/CV" target={"_blank"}>Decargar CV</a></li> {/*onClick={handleClick1} className={`${clicked1 ? 'activo' : ''}`}*/}
+            <li><a onClick={handleClick1} data-scroll="Inicio" href="#Inicio">Inicio</a></li> {/*onClick={handleClick1} className={`${clicked1 ? 'activo' : ''}`}*/}
+            <li><a onClick={handleClick1} data-scroll="About" href="#About">SobreMi</a></li> {/*onClick={handleClick1} className={`${clicked1 ? 'activo' : ''}`}*/}
+            <li><a onClick={handleClick1} data-scroll="Proyectos" href="#Proyectos">Proyectos</a></li> {/*onClick={handleClick1} className={`${clicked1 ? 'activo' : ''}`}*/}
+            <li><a onClick={handleClick1} data-scroll="Contacto" href="#Contacto">Contacto</a></li> {/*onClick={handleClick1} className={`${clicked1 ? 'activo' : ''}`}*/}
         </ul>
         </div>
             {/* <SwitchLang></SwitchLang> */}
@@ -68,20 +69,17 @@ const NavBar = () => {
 export default NavBar
 
 const NavContainer = styled.nav `
-    html{
-        scroll-behavior: smooth;
-    }
-    scroll-behavior: smooth;
     z-index: 1000;
-    position: fixed;
+    position: sticky;
     top:0px;
     left: 0px;
     display: flex;
     width: 100%;
+    height: 100%;
     background: linear-gradient(
                 to bottom,
-                rgba(31,30,27,1),
-                rgba(31,30,27.5)
+                rgba(31,30,27,0.8),
+                rgba(31,30,27,0.7)
                 );
     border-bottom: dashed;
     border-color: #ff2301;
@@ -144,7 +142,8 @@ const NavContainer = styled.nav `
         @media(min-width: 1000px){
             position: initial;
             margin: 0;
-            /* display: block; */
+            display: block; /*  */ 
+            
             a{
                 font-size: 1.5rem;
                 /* padding: 15px 15px; */
@@ -162,7 +161,7 @@ const NavContainer = styled.nav `
         width: 100%;
         display: flex;
         flex-direction: column;
-        position: absolute;
+        position: relative;
         margin-left: auto;
         margin-right: auto;
         top: 30%;
@@ -192,7 +191,6 @@ const BgDiv = styled.div`
     width: 100%;
     height: 100%;
     &.active{
-        border-radius: 0 0 80% 0;
         top: 0;
         left: 0;
         align-items: center;

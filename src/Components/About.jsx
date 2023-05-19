@@ -1,19 +1,8 @@
 import React from "react";
-// import Footer from "./Footer";
-// import NavBar from './NavBar'
 import styled from "styled-components";
 
-import iconoCss from '../skills/Css.png'
-import iconohtml from '../skills/Html.png'
-import iconoBoostrap from '../skills/Boostrap.png'
-import iconoJavaScript from '../skills/JavaScript.png'
-import iconoMongoDB from '../skills/MongoDB.png'
-import iconoNode from '../skills/Node.png'
-import iconoPostgresql from '../skills/Postgresql.png'
-import iconoReact from '../skills/React.png'
-import iconoTailwind from '../skills/Tailwind.png'
-import iconoTypeScript from '../skills/TypeScript.png'
-
+import { DiCss3, DiGithubBadge, DiGit, DiJsBadge, DiHtml5, DiMongodb, DiNodejsSmall, DiPostgresql, DiReact, DiPython, DiTrello, DiVisualstudio  } from "react-icons/di";
+import {SiTailwindcss, SiTypescript} from 'react-icons/si'
 
 const About = () => {
 
@@ -73,16 +62,24 @@ const About = () => {
             <rect x="4" y="4" width="16" height="16" rx="4" />
             </svg>
             <div className="icons-container">
-                <img alt="Skill icon not found" src={iconoCss}></img>
-                <img alt="Skill icon not found" src={iconoBoostrap}></img>
-                <img alt="Skill icon not found" src={iconohtml}></img>
-                <img alt="Skill icon not found" src={iconoJavaScript}></img>
-                <img alt="Skill icon not found" src={iconoMongoDB}></img>
-                <img alt="Skill icon not found" src={iconoNode}></img>
-                <img alt="Skill icon not found" src={iconoPostgresql}></img>
-                <img alt="Skill icon not found" src={iconoReact}></img>
-                <img alt="Skill icon not found" src={iconoTailwind}></img>
-                <img alt="Skill icon not found" src={iconoTypeScript}></img>
+                <h5><b>CSS</b><DiCss3 fontSize={'100px'} color="#1b73ba"/></h5>
+                <h5><b>HTML</b><DiHtml5 fontSize={'100px'} color="e54d26"/></h5>                
+                <h5><b>JavaScript</b><DiJsBadge fontSize={'100px'} color='#ffff00'/></h5>
+                <h5><b>React</b><DiReact fontSize={'100px'} color="#61dbfb"/></h5>
+                <h5><b>Node</b><DiNodejsSmall fontSize={'100px'} color="#8dc62b"/></h5>
+                <h5><b>Python</b><DiPython fontSize={'100px'} color="#306998"/></h5>
+                <h5><b>MongoDB</b><DiMongodb fontSize={'100px'} color="#4DB33D"/></h5>
+                <h5><b>Postgresql</b><DiPostgresql fontSize={'100px'} color="#008bb9"/></h5>
+                <h5><b>Tailwind</b><SiTailwindcss fontSize={'100px'} color="#3490dc"/></h5>
+                <h5><b>TypeScript</b><SiTypescript fontSize={'100px'} color="#008acc"/></h5>
+                <h5><b>Git</b><DiGit fontSize={'100px'} color="#f1502f"/></h5>
+                <h5><b>GitHub</b><DiGithubBadge fontSize={'100px'} color="#b8c2cc" /></h5>
+                <h5><b>VSC</b><DiVisualstudio fontSize={'100px'} color="#0078d7"/></h5>
+                <h5><b>Trello</b><DiTrello color='#0079bf' fontSize={'100px'}/></h5>
+
+
+                
+
             </div>
             </div>
         </div>
@@ -96,12 +93,28 @@ const About = () => {
 export default About
 
 const AboutContainer = styled.nav`
-    min-height: 84vh;
+    padding-top: 80px;
+    h5{
+        /* display: flex; */
+        flex-direction: column-reverse;
+        display: inline-flex;
+        font-size: 20px;
+        color: var(--text-primary-about);
+
+    }
     a{
-        color: #ff2301;
+        color: var(--text-primary-about);
         
     }
-    
+    .icons-container{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        gap: 3px;
+        padding: 0px;
+        margin: 0px;
+    }
     .container{
         display: flex;
         margin: 10px;
@@ -114,8 +127,8 @@ const AboutContainer = styled.nav`
     .sobre{  
         background: linear-gradient(
                 to bottom,
-                rgba(0,0,0,0.2),
-                rgba(0,0,0,0.2)
+                rgba(0,0,0,0.1),
+                rgba(0,0,0,0.1)
                 );
         @media(max-width:1200px){
             max-width: 100%;
@@ -129,13 +142,13 @@ const AboutContainer = styled.nav`
         p{
             font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
             font-size: 25px;
-            color: #ff1908;
+            color: var(--text-primary-about);
             
         }
         li{
             font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
                 font-size: 25px;
-                color: #ff2301;
+                color: var(--text-primary-about);
         }
     }
 

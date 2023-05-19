@@ -7,37 +7,62 @@ import Footer from "./Footer";
 import Contacto from "./Contacto";
 import Proyectos from "./Proyectos";
 import About from "./About";
+import Typed from "typed.js";
 
 const LandingPage = () => {
-
-
+    // console.log(elementId);
+    const el = React.useRef(null);
+    React.useEffect(()=>{
+      const typed = new Typed(el.current, {
+        strings: ['Bienvenido', 'Bienvenida'],
+        typeSpeed: 50,
+        loop:true,
+        showCursor:false,
+      });
+      return () => {
+        typed.destroy();
+      };
+    }, []);
+    const el1 = React.useRef(null);
+    React.useEffect(()=>{
+      const typed = new Typed(el1.current, {
+        strings: ['Soy Desarrollador Full Stack'],
+        typeSpeed: 50,
+        loop:true,
+        showCursor:false,
+      });
+      return () => {
+        typed.destroy();
+      };
+    }, []);
+    
 
     return (
         <>
-        <NavBar></NavBar>
+        {/* <section> */}
+          <NavBar></NavBar>
+        {/* </section> */}
         <section id="Inicio">
+          <LandingContainer>  
+            <div className="contNoA">
+            <div className="contImg">
 
+            <img src={foto} alt="Profile not found"></img>
+
+            </div>
+          <div className="contTexto">
+          
+          <h1>Hola! <span ref={el}></span>!👋</h1>
+            <h2>Mi nombre es Juan Pablo Arnau 👨‍💻</h2>
+
+          
+            <div><h3>💻<span ref={el1}></span>💻</h3></div>
         
-        <LandingContainer>  
-        <div className="contNoA">
-        <div className="contImg">
-
-        <img src={foto} alt="Profile not found"></img>
-
-        </div>
-        <div className="contTexto">
-
-        <h1>Hola! Bienvenidos!👋</h1>
-        <div id="rectangle">Bienvenidos<span></span></div>
-        <h2>Mi nombre es Juan Pablo Arnau 👨‍💻</h2>
-
-        <h3>💻Soy desarrollador full stack💻</h3>
+            <p>📍Naci y vivo en Argentina📍</p>
         
-        <p>📍Naci y vivo en Argentina📍</p>
-        
-        <p>📩juanarnau81@gmail.com📩</p>
-        </div>
-        </div>
+            <p>📩juanarnau81@gmail.com📩</p>
+          </div>
+          </div>
         <div className="aCont">
             <a href="https://github.com/JuanArnau7/">
             <svg xmlns="http://www.w3.org/2000/svg" className="icon icon-tabler icon-tabler-brand-github" width="54" height="54" viewBox="0 0 24 24" strokeWidth="1.5" stroke="#ff2301" fill="none" strokeLinecap="round" strokeLinejoin="round">
@@ -60,12 +85,14 @@ const LandingPage = () => {
         </LandingContainer>
         </section>
         <section id="About">
+
             <About></About>
         </section>
         <section id="Proyectos">
             <Proyectos></Proyectos>
         </section>
         <section id="Contacto">
+
             <Contacto></Contacto>
         </section>
 
@@ -78,7 +105,7 @@ export default LandingPage
 
 const LandingContainer =styled.nav `
 /* background-color: #1B1A17; */
-scroll-behavior: smooth;
+/* scroll-behavior: smooth; */
 padding-top: 150px;
 .contImg{
     width: 450px;
@@ -90,7 +117,7 @@ padding-top: 150px;
 	overflow: hidden;
 	box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
 	transform: translatey(0px);
-	animation: float 6s ease-in-out infinite;
+	animation: float 7s ease-in-out infinite;
 	img { width: 100%; height: 100%; 
     }
     @media(max-width: 850px){
@@ -100,84 +127,21 @@ padding-top: 150px;
 }
 @keyframes float {
 	0% {
-		box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
+		box-shadow: 0 5px 15px 0px rgba(0,0,0,0.7);
 		transform: translatey(0px);
 	}
 	50% {
-		box-shadow: 0 25px 15px 0px rgba(0,0,0,0.2);
-		transform: translatey(-20px);
+		box-shadow: 0 25px 15px 0px rgba(0,0,0,0.3);
+		transform: translatey(-30px);
 	}
 	100% {
-		box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
+		box-shadow: 0 5px 15px 0px rgba(0,0,0,0.7);
 		transform: translatey(0px);
 	}
 }
 
 /* ANIMACION BIENVENIDOS */
-#rectangle {
-  position: relative;
-  float: left;
-  font-size: 18px;
-  font-family: "Lucida Console", Monaco, monospace;
-  background-color: white;
-}
 
-#rectangle > span {
-  position: absolute;
-  top: 0;
-  right: 0;
-  height: 100%;
-  background-color: white;
-  border-left: 1px solid transparent;
-  animation: Fwrite 3s steps(14, start) infinite, Wbar 0.5s step-end infinite;
-    -webkit-animation: Fwrite 3s steps(14, start) infinite, Wbar 0.5s step-end infinite;
-}
-
-#rectangle > p:hover {
-  animation-play-state: paused;
-}
-
-@keyframes Fwrite {
-  0% {
-    width: 100%;
-  }
-  100% {
-    width: 0;
-  }
-}
-
-@keyframes Wbar {
-  0% {
-    border-left-color: transparent;
-  }
-  50% {
-    border-left-color: black;
-  }
-  100% {
-    border-left-color: transparent;
-  }
-}
-
-@-webkit-keyframes Fwrite {
-  0% {
-    width: 100%;
-  }
-  100% {
-    width: 0;
-  }
-}
-
-@-webkit-keyframes Wbar {
-  0% {
-    border-left-color: transparent;
-  }
-  50% {
-    border-left-color: black;
-  }
-  100% {
-    border-left-color: transparent;
-  }
-}
 /* FIN ANIMACION BIENVENIDOS */
 /* img{
     border-radius: 50%;
@@ -210,6 +174,7 @@ a{
     padding: 1rem;
     margin: 1.5rem 5rem;
     transition: transform 250ms, opacity 400ms;
+    
 
 }
 .contNoA{
