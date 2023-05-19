@@ -52,11 +52,14 @@ const LandingPage = () => {
             </div>
           <div className="contTexto">
           
+          <div className="bienvenido">
+
           <h1>Hola! <span ref={el}></span>!👋</h1>
+          </div>
             <h2>Mi nombre es Juan Pablo Arnau 👨‍💻</h2>
 
           
-            <div><h3>💻<span ref={el1}></span>💻</h3></div>
+            <div className="desarrollador"><h3>💻<span ref={el1}></span>💻</h3></div>
         
             <p>📍Naci y vivo en Argentina📍</p>
         
@@ -107,6 +110,22 @@ const LandingContainer =styled.nav `
 /* background-color: #1B1A17; */
 /* scroll-behavior: smooth; */
 padding-top: 150px;
+.bienvenido{
+    @media (max-width: 700px) {
+        height: 100px;
+    }
+    @media (max-width: 550px) {
+        height: 150px;
+    }
+}
+.desarrollador{
+    @media (max-width: 700px) {
+        height: 100px;
+    }
+    @media (max-width: 550px) {
+        height: 150px;
+    }
+}
 .contImg{
     width: 450px;
 	height: 450px;
