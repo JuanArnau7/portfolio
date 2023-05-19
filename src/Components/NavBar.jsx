@@ -70,12 +70,12 @@ export default NavBar
 
 const NavContainer = styled.nav `
     z-index: 1000;
-    position: sticky;
+    position: fixed;
     top:0px;
     left: 0px;
     display: flex;
     width: 100%;
-    height: 100%;
+    /* height: 100%; */
     background: linear-gradient(
                 to bottom,
                 rgba(31,30,27,0.8),
