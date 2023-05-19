@@ -50,7 +50,7 @@ const Proyectos = () => {
                             </p>
                             <div className="iconos-backcard">
 
-                                <a href="">GitHub<SiGithub size="3rem" ></SiGithub></a>    <a href="">Deploy<HiOutlineWindow size="3rem"></HiOutlineWindow></a>
+                                <a href="https://github.com/JuanArnau7/HenryClient">GitHub<SiGithub size="3rem" ></SiGithub></a>    <a href="https://main-henry-client.vercel.app/local/alterHome">Deploy<HiOutlineWindow size="3rem"></HiOutlineWindow></a>
                                 </div>
                         </div>
                     </div>
@@ -85,7 +85,7 @@ const Proyectos = () => {
                                 </p>
                                 <div className="iconos-backcard">
 
-                                <a href="">GitHub<SiGithub size="3rem" ></SiGithub></a>    <a href="">Deploy<HiOutlineWindow size="3rem"></HiOutlineWindow></a>
+                                <a href="https://portfolio-juanarnau7.vercel.app/">Deploy<HiOutlineWindow size="3rem"></HiOutlineWindow></a>
                                 </div>
                         </div>
                     </div>
@@ -121,7 +121,7 @@ const Proyectos = () => {
                                 </p>
                                 <div className="iconos-backcard">
 
-                                    <a href="">GitHub<SiGithub size="3rem" ></SiGithub></a>    <a href="">Deploy<HiOutlineWindow size="3rem"></HiOutlineWindow></a>
+                                    <a href="https://github.com/JuanArnau7/PI_FRONT">GitHub<SiGithub size="3rem" ></SiGithub></a>    <a href="https://pi-front-six.vercel.app/home">Deploy<HiOutlineWindow size="3rem"></HiOutlineWindow></a>
                                 </div>
                         </div>
                     </div>
